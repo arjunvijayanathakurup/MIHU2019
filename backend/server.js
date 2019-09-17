@@ -38,7 +38,7 @@ const volunteersRouter = require('./routes/volunteers');
 app.use('/accomodations', accomodationsRouter);
 app.use('/ashrams', ashramsRouter);
 app.use('/coordinators', coordinatorsRouter);
-// app.use('/darshans', darshansRouter);
+app.use('/darshans', darshansRouter);
 // app.use('/emergencies', emergenciesRouter);
 // app.use('/faqs', faqsRouter);
 // app.use('/foods', foodsRouter);
