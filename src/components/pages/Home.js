@@ -20,7 +20,7 @@ class Home extends Component{
                             <div className="middle zoom">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-users" ></i>
-                                    <h5>Darshan Timing</h5>
+                                    <h5>Darshan</h5>
                                 </div>     
                             </div> 
                         </div>
