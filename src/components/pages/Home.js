@@ -4,52 +4,122 @@ class Home extends Component{
     render(){
 
         return (
-            <div id="accordion" className="container">
-  <div className="card">
-    <div className="card-header" id="headingOne">
-      <h5 className="mb-0">
-        <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </button>
-      </h5>
-    </div>
+            <div className="container1" >
+                    	
+                    <div className="row" >
+                        <div className="col-xs-12 col-lg-4 col-sm-6 thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-building" ></i>
+                                    <h5>Accommodation</h5>
+                                </div>     
+                            </div> 
+                        </div>
 
-    <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div className="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div className="card">
-    <div className="card-header" id="headingTwo">
-      <h5 className="mb-0">
-        <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div className="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div className="card">
-    <div className="card-header" id="headingThree">
-      <h5 className="mb-0">
-        <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div className="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  
-</div>
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-users" ></i>
+                                    <h5>Darshan Timing</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-cutlery " ></i>
+                                    <h5>Food</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-train" ></i>
+                                    <h5>Transportation</h5>
+                                </div>     
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-ambulance" ></i>
+                                    <h5>Emergency</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-street-view" ></i>
+                                    <h5>Coordinators</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-male" ></i>
+                                    <h5>Volunteers</h5>
+                                </div>     
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-map" ></i>
+                                    <h5>Map</h5>
+                                </div>     
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-info-circle" ></i>
+                                    <h5>Info</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-handshake-o " ></i>
+                                    <h5>VCC</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-user " ></i>
+                                    <h5>Ashram</h5>
+                                </div>     
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-question-circle" ></i>
+                                    <h5>FAQ</h5>
+                                </div>     
+                            </div> 
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+            </div>
         )
 
     }

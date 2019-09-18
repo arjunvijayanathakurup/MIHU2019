@@ -4,6 +4,17 @@
 .nav1{
   margin-bottom: 10px; margin-top: 5px;
 }
+
+.container1{
+  margin: 0 18%;
+}
+.hr1{
+
+  border-color: white;
+}
+.c1{
+  text-align: center;
+}
 .nav2{
   font-family: 'Cabin', sans-serif;
 }
