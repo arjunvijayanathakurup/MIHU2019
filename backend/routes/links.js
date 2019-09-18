@@ -15,7 +15,7 @@ router.route('/add').post((req, res) => {
     });
 
     newLive.save()
-    .then(() => res.json('New Live added!'))
+    .then(() => res.json('New Live link added!'))
     .catch(err => res.status(400).json('Error ' + err));
 });
 
