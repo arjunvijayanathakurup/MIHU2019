@@ -11,6 +11,6 @@ const foodSchema = new Schema({
     timestamps: true,
 });
 
-const foodSchema = mongoose.model('Food', foodSchema);
+const Food = mongoose.model('Food', foodSchema);
 
 module.exports = foodSchema;
