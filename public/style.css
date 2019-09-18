@@ -8,6 +8,22 @@
 .container1{
   margin: 0 18%;
 }
+.hide-notification{
+  display: none;
+
+}
+.notification{
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+.notification-main{
+  padding: 4% 3%;
+}
+.notification-section{
+  margin-left: 10px;
+}
 .hr1{
 
   border-color: white;
@@ -47,7 +63,13 @@ body {
   height: 200px; 
   
 }
+.notification-main h5{
+  font-style: bold;
+}
 h5{
+  font-style: italic;
+}
+h6{
   font-style: italic;
 }
 .middle{

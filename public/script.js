@@ -4,12 +4,16 @@ $(document).ready(function(){
         closeEffect: "none"
     });
     
-    $(".zoom").hover(function(){
+  $(".zoom").hover(function(){
 		
-		$(this).addClass('transition');
+	$(this).addClass('transition');
 	}, function(){
         
 		$(this).removeClass('transition');
-	});
+  });
+  
+  $(".fa-bell").click(function(){
+    $(".notification").toggle(1000);
+    });
 });
     
