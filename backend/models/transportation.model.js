@@ -6,7 +6,7 @@ const transportationSchema = new Schema({
     mode: {type: String, required: true},
     busno: {type: String},
     contact: {type: String, required: true},
-    from: {type: String, required: true},
+    froms: {type: String, required: true},
     destination: {type: String, required: true},
     deptime: {type: String},
     parking: {type: String},
