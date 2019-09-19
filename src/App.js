@@ -5,7 +5,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './components/pages/Home'
 import Darshan from './components/pages/Darshan'
-
+import Accomodation from './components/pages/Accomodation'
 class App extends Component{
 
   render (){
@@ -16,7 +16,8 @@ class App extends Component{
           <Switch>  
             <Route exact path="/" component={Home}/>
             <Route exact path="/darshan" component={Darshan}/>
-            
+            <Route exact path="/accommodation" component={Accomodation}/>
+
 
           </Switch>
           

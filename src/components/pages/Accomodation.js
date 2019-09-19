@@ -25,7 +25,7 @@ export default function Accommodation() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       } },
-      { title: 'Token Location', field: 'token_loc', 
+      { title: 'Location', field: 'loc', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +34,7 @@ export default function Accommodation() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }},
-      { title: 'Token Time', field: 'token_time' , 
+      { title: 'Category', field: 'categ' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -44,6 +44,33 @@ export default function Accommodation() {
         color: 'white'
       }},
       
+      { title: 'Coordinator', field: 'coord' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }},
+      { title: 'Contact', field: 'contact' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }},
+      { title: 'Status', field: 'status' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }}
       
     ],
     data: [
@@ -57,7 +84,7 @@ export default function Accommodation() {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Darshan Timings"
+            title="Accommodation"
             columns={state.columns}
             data={state.data}
             options={{
