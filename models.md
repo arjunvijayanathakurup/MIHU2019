@@ -21,7 +21,7 @@ user{
 	isfull
 }~~
 
-volunteers{
+~~volunteers{
 	name
 	batch
 	campus
@@ -30,7 +30,7 @@ volunteers{
 	CORDNAME
 	CORDCONTACT
 	
-}
+}~~
 
 coordinators{
 	NAME
@@ -99,11 +99,11 @@ staff_table{
 	COUNTER
 }~~
 
-volunteer_care{
+~~volunteer_care{
 	FOOD
 	TIME
 	PLACE
-}	
+}~~	
 
 information{
 	MESSAGE
