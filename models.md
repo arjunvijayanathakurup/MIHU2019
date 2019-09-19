@@ -5,11 +5,11 @@ user{
 	token
 }
 
-emergencies{
+~~emergencies{
 	service
 	name
 	contact
-}
+}~~
 
 ~~accomodations{
 	gender
@@ -85,12 +85,12 @@ staff_table{
 	CONTACT
 }
 
-ashram_volunteers{
+~~ashram_volunteers{
 	SECTION
 	SEVA_PLACE
 	INCHARGE
 	CONTACT
-}
+}~~
 
 ~~foods{
 	MEAL
