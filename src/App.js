@@ -15,6 +15,8 @@ import Coordinator from './components/pages/Coordinator'
 import Ashram from './components/pages/Ashram'
 import Emergency from './components/pages/Emergency'
 import VCC from './components/pages/VCC'
+import Info from './components/pages/Info'
+
 
 class App extends Component{
 
@@ -34,7 +36,7 @@ class App extends Component{
             <Route exact path="/volunteer" component={Volunteer}/>
             <Route exact path="/coordinator" component={Coordinator}/>
             <Route exact path="/vcc" component={VCC}/>
-
+            <Route exact path="/info" component={Info}/>
           </Switch>
           
           <Footer />

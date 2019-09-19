@@ -150,16 +150,18 @@ class Home extends Component{
 
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                            <Link to="/info">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-info-circle" ></i>
                                     <h5>Info</h5>
                                 </div>     
+                                </Link>
                             </div> 
                         </div>
                         
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                            <Link to="/ashram">
+                            <Link to="/VCC">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-handshake-o " ></i>
                                     <h5>VCC</h5>
