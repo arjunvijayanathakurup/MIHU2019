@@ -11,7 +11,7 @@ emergencies{
 	contact
 }
 
-accomodations{
+~~accomodations{
 	gender
 	areaname
 	locationofacc
@@ -45,7 +45,7 @@ faqs{
 	ANSWER
 }
 
-darshans{
+~~darshans{
 	DATE
 	DARSHAN_TIME
 	TOKEN_LOC
@@ -68,7 +68,7 @@ log_engine{
 	ACTIONVAL
 }
 
-transportations{
+~~transportations{
 	MODE
 	BUSNO
 	CONTACT
@@ -92,7 +92,7 @@ ashram_volunteers{
 	CONTACT
 }
 
-foods{
+~~foods{
 	MEAL
 	TIME
 	PLACE
