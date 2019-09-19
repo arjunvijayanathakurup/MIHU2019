@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MaterialTable from 'material-table';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
-
-export default function Food() {
-  const [state, setState] = React.useState({
+// transportations{ MODE BUSNO CONTACT FROM DESTINATION DEPTIME PARKING }
+export default function Transportation() {
+  const [state, setState] = useState({
     columns: [
-      { title: 'Meal', field: 'meal', 
+      { title: 'Mode', field: 'mode', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -16,7 +16,7 @@ export default function Food() {
         color: 'white'
       }
     },
-      { title: 'TIme', field: 'time', 
+      { title: 'Bus No', field: 'bus', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -25,7 +25,7 @@ export default function Food() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       } },
-      { title: 'Location', field: 'Location', 
+      { title: 'Contact', field: 'contact', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +34,7 @@ export default function Food() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }},
-      { title: 'Counter', field: 'counter' , 
+      { title: 'Departure', field: 'depart' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -44,11 +44,38 @@ export default function Food() {
         color: 'white'
       }},
       
+      { title: 'Destination', field: 'destin' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }},
+      { title: 'Departure Time', field: 'dtime' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }},
+      { title: 'Parking', field: 'parking' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+        background: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
+      }}
       
     ],
     data: [
-      { meal: 'Putte', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { meal: 'Chappathi', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
+      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
     ],
   });
 //   
@@ -57,7 +84,7 @@ export default function Food() {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Food & Drinks"
+            title="Transportation"
             columns={state.columns}
             data={state.data}
             options={{
