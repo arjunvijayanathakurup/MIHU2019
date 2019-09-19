@@ -17,7 +17,7 @@ import Emergency from './components/pages/Emergency'
 import VCC from './components/pages/VCC'
 import Info from './components/pages/Info'
 import StaffVolunteer from './components/pages/StaffVolunteers'
-
+import Faq from './components/pages/Faq'
 
 class App extends Component{
 
@@ -38,6 +38,7 @@ class App extends Component{
             <Route exact path="/coordinator" component={Coordinator}/>
             <Route exact path="/vcc" component={VCC}/>
             <Route exact path="/info" component={Info}/>
+            <Route exact path="/faq" component={Faq}/>
             <Route exact path="/staffvolunteer" component={StaffVolunteer}/>
           </Switch>
           
