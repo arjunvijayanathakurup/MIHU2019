@@ -12,6 +12,10 @@ import Food from './components/pages/Food'
 import Transportation from './components/pages/Transportation'
 import Volunteer from './components/pages/Volunteer'
 import Coordinator from './components/pages/Coordinator'
+import Ashram from './components/pages/Ashram'
+import Emergency from './components/pages/Emergency'
+import VCC from './components/pages/VCC'
+
 class App extends Component{
 
   render (){
@@ -25,8 +29,12 @@ class App extends Component{
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
             <Route exact path="/transportation" component={Transportation}/>
+            <Route exact path="/emergency" component={Emergency}/>
+            <Route exact path="/ashram" component={Ashram}/>
             <Route exact path="/volunteer" component={Volunteer}/>
             <Route exact path="/coordinator" component={Coordinator}/>
+            <Route exact path="/vcc" component={VCC}/>
+
           </Switch>
           
           <Footer />
