@@ -11,7 +11,7 @@ emergencies{
 	contact
 }
 
-accomodations{
+~~accomodations{
 	gender
 	areaname
 	locationofacc
@@ -19,7 +19,7 @@ accomodations{
 	coord
 	contact
 	isfull
-}
+}~~
 
 volunteers{
 	name
@@ -45,12 +45,12 @@ faqs{
 	ANSWER
 }
 
-darshans{
+~~darshans{
 	DATE
 	DARSHAN_TIME
 	TOKEN_LOC
 	TOKEN_TIME
-}
+}~~
 
 stadd_volunteers{
 	NAME
@@ -68,7 +68,7 @@ log_engine{
 	ACTIONVAL
 }
 
-transportations{
+~~transportations{
 	MODE
 	BUSNO
 	CONTACT
@@ -76,7 +76,7 @@ transportations{
 	DESTINATION
 	DEPTIME
 	PARKING
-}
+}~~
 
 staff_table{
 	NAME
@@ -92,12 +92,12 @@ ashram_volunteers{
 	CONTACT
 }
 
-foods{
+~~foods{
 	MEAL
 	TIME
 	PLACE
 	COUNTER
-}
+}~~
 
 volunteer_care{
 	FOOD
