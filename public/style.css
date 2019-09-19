@@ -84,8 +84,27 @@ body {
   height: 200px;
 
 }
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters{
+  color: white;
+  background: inherit;
+}
+div.MuiToolbar-root.MuiToolbar-regular.MTableToolbar-root-32.MuiToolbar-gutters{
+  background: rgba(0, 0, 0, 0.6);
+}
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters button{
+  color: white;
+  background: inherit;
+}
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters .MuiTypography-root.MuiTypography-caption{
+  color: white;
+  text-align: center;
+  background: inherit;
+}
 
-.notification-main h5 {
+table.MuiTable-root{
+  border: none;
+}
+.notification-main h5{
   font-style: bold;
 }
 
@@ -112,11 +131,9 @@ h6 {
   /* background-color: #1b133b;
   
   opacity: 0.6; */
-
-
 }
 
-i.fa {
+i.fa{
   font-size: 1.5em;
 }
 
