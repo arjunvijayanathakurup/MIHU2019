@@ -5,11 +5,11 @@ user{
 	token
 }
 
-emergencies{
+~~~emergencies{
 	service
 	name
 	contact
-}
+}~~
 
 ~~accomodations{
 	gender
