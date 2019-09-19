@@ -69,6 +69,22 @@ body {
   height: 200px; 
   
 }
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters{
+  color: white;
+  background: inherit;
+}
+
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters button{
+  color: white;
+  background: inherit;
+}
+div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters .MuiTypography-root.MuiTypography-caption{
+  color: white;
+  background: inherit;
+}
+table.MuiTable-root{
+  border: none;
+}
 .notification-main h5{
   font-style: bold;
 }
