@@ -3,10 +3,10 @@ import MaterialTable from 'material-table';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
-export default function Darshan() {
+export default function VCC() {
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Section', field: 'section', 
+      { title: 'Food', field: 'food', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -16,7 +16,7 @@ export default function Darshan() {
         color: 'white'
       }
     },
-      { title: 'Seva Location', field: 'seva_location', 
+      { title: 'TIme', field: 'time', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -25,7 +25,7 @@ export default function Darshan() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       } },
-      { title: 'Incharge', field: 'incharge', 
+      { title: 'Place', field: 'place', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,21 +34,13 @@ export default function Darshan() {
         background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }},
-      { title: 'Contact', field: 'contact' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
-        color: 'white'
-      }},
+      
       
       
     ],
     data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      { food: 'Putte', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
+      { food: 'Chappathi', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
     ],
   });
 //   
@@ -57,7 +49,7 @@ export default function Darshan() {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Ashram Volunteers"
+            title="Food & Drinks"
             columns={state.columns}
             data={state.data}
             options={{
