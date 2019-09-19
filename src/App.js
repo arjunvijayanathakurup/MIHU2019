@@ -10,6 +10,7 @@ import Darshan from './components/pages/Darshan'
 import Accomodation from './components/pages/Accomodation'
 import Food from './components/pages/Food'
 import Transportation from './components/pages/Transportation'
+import Volunteer from './components/pages/Volunteer'
 class App extends Component{
 
   render (){
@@ -23,6 +24,8 @@ class App extends Component{
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
             <Route exact path="/transportation" component={Transportation}/>
+            <Route exact path="/volunteer" component={Volunteer}/>
+
           </Switch>
           
           <Footer />
