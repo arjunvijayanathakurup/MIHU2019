@@ -19,7 +19,7 @@ emergencies{
 	coord
 	contact
 	isfull
-}
+}~~
 
 volunteers{
 	name
@@ -50,7 +50,7 @@ faqs{
 	DARSHAN_TIME
 	TOKEN_LOC
 	TOKEN_TIME
-}
+}~~
 
 stadd_volunteers{
 	NAME
@@ -76,7 +76,7 @@ log_engine{
 	DESTINATION
 	DEPTIME
 	PARKING
-}
+}~~
 
 staff_table{
 	NAME
@@ -97,7 +97,7 @@ ashram_volunteers{
 	TIME
 	PLACE
 	COUNTER
-}
+}~~
 
 volunteer_care{
 	FOOD
