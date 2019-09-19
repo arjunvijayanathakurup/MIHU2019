@@ -108,10 +108,12 @@ class Home extends Component{
 
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                                <Link to="/emergency">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-ambulance" ></i>
                                     <h5>Emergency</h5>
-                                </div>     
+                                </div>  
+                                </Link>   
                             </div> 
                         </div>
                         
@@ -162,10 +164,12 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                            <Link to="/ashram">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-user " ></i>
                                     <h5>Ashram</h5>
                                 </div>     
+                                </Link>
                             </div> 
                         </div>
 
