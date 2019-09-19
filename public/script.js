@@ -16,4 +16,4 @@ $(document).ready(function(){
     $(".notification").toggle(1000);
     });
 });
-    
+   

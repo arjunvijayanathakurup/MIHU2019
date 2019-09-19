@@ -10,9 +10,10 @@ import Darshan from './components/pages/Darshan'
 import Accomodation from './components/pages/Accomodation'
 import Food from './components/pages/Food'
 import Transportation from './components/pages/Transportation'
-import Emergency from './components/pages/Emergency'
+import Volunteer from './components/pages/Volunteer'
 import Ashram from './components/pages/Ashram'
-
+import Emergency from './components/pages/Emergency'
+import VCC from './components/pages/VCC'
 
 class App extends Component{
 
@@ -29,6 +30,9 @@ class App extends Component{
             <Route exact path="/transportation" component={Transportation}/>
             <Route exact path="/emergency" component={Emergency}/>
             <Route exact path="/ashram" component={Ashram}/>
+            <Route exact path="/volunteer" component={Volunteer}/>
+            <Route exact path="/vcc" component={VCC}/>
+
           </Switch>
           
           <Footer />
