@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 class Home extends Component{
     render(){
@@ -63,14 +64,20 @@ class Home extends Component{
                                 </div>     
                             </div> 
                         </div>
-
+                        
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                            
+                            
                             <div className="middle zoom">
+                            <Link to="/darshan">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-users" ></i>
+                                    
                                     <h5>Darshan</h5>
-                                </div>     
+                                </div>  
+                            </Link>   
                             </div> 
+                            
                         </div>
                         
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">

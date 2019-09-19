@@ -24,7 +24,7 @@ const Navbar = (props) => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2" >
                 <ul className="navbar-nav ml-auto nav3"  >
                     <li className="nav-item nav3">
-                        <a className="nav-link" href="#"><i className="fa fa-home nav4" ></i></a>
+                        <a className="nav-link" href="/"><i className="fa fa-home nav4" ></i></a>
                     </li>
                     <li className="nav-item nav3">
                         <a className="nav-link" href="#"><i className="fa fa-bell nav5"></i></a>
