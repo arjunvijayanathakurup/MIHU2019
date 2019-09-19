@@ -117,10 +117,12 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                                <div className="center-vh c1" >
-                                    <i className="fa fa-street-view" ></i>
-                                    <h5>Coordinators</h5>
-                                </div>     
+                                <Link to='/coordinator'>
+                                    <div className="center-vh c1" >
+                                        <i className="fa fa-street-view" ></i>
+                                        <h5>Coordinators</h5>
+                                    </div>
+                                </Link>     
                             </div> 
                         </div>
                         

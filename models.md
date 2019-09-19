@@ -29,16 +29,14 @@ user{
 	SEVA
 	CORDNAME
 	CORDCONTACT
-	
 }~~
 
-coordinators{
+~~coordinators{
 	NAME
 	SEVA
 	DEPARTMENT
 	CONTACT
-	
-}
+}~~~
 
 faqs{
 	QUESTION
@@ -57,7 +55,7 @@ stadd_volunteers{
 	DEPARTMENT
 	SEVA
 	
-}
+}  -- working Arjun
 
 log_engine{
 	USER_ID
