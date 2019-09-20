@@ -64,7 +64,18 @@
 .nav5 {
   font-size: 1.3em;
 }
-
+.material-icons.MuiIcon-root.MuiTableSortLabel-icon.MuiTableSortLabel-iconDirectionAsc{
+  color: #f8f8ff !important;
+  margin-left: 2px;
+}
+.MuiTableSortLabel-root.MuiTableSortLabel-active {
+  color:  white  !important;
+  
+}
+.material-icons.MuiIcon-root.MuiTableSortLabel-icon.MuiTableSortLabel-iconDirectionDesc{
+  color: white !important;
+  margin-left: 2px;
+}
 body {
   /*background-color:#1d1d1d !important;*/
   font-family: "Asap", sans-serif;
@@ -96,7 +107,7 @@ div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-pagi
   background: inherit;
 }
 div.MuiToolbar-root.MuiToolbar-regular.MTableToolbar-root-32.MuiToolbar-gutters{
-  /* background: rgba(0, 0, 0, 0.6); */
+  background: rgba(0, 0, 0, 0.1);
 }
 div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters button{
   color: white;
