@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-
+// import Carousel from 'react-bootstrap/Carousel'
 class Home extends Component{
     render(){
 
@@ -153,7 +153,7 @@ class Home extends Component{
                             <Link to="/info">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-info-circle" ></i>
-                                    <h5>Info</h5>
+                                    <h5>Schedule</h5>
                                 </div>     
                                 </Link>
                             </div> 
