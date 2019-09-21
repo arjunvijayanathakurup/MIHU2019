@@ -83,7 +83,7 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                                <Link to='/volunteer'>
+                                <Link to='/admin/volunteer'>
                                     <div className="center-vh c1" >
                                         <i className="fa fa-male" ></i>
                                         <h5>Volunteers</h5>
@@ -94,16 +94,18 @@ class Home extends Component{
 
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                            <Link to='/admin/map'>
                                 <div className="center-vh c1" >
                                     <i className="fa fa-map" ></i>
                                     <h5>Map</h5>
-                                </div>     
+                                </div>  
+                                </Link>   
                             </div> 
                         </div>
 
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                            <Link to="/info">
+                            <Link to="/admin/info">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-info-circle" ></i>
                                     <h5>Schedule</h5>
@@ -114,7 +116,7 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                            <Link to="/VCC">
+                            <Link to="/admin/VCC">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-handshake-o " ></i>
                                     <h5>VCC</h5>
@@ -125,7 +127,7 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
-                            <Link to="/ashram">
+                            <Link to="/admin/ashram">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-user " ></i>
                                     <h5>Ashram</h5>
