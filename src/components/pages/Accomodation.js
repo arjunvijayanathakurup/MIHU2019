@@ -12,7 +12,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }
     },
@@ -22,7 +22,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       } },
       { title: 'Location', field: 'loc', 
@@ -31,7 +31,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       { title: 'Category', field: 'categ' , 
@@ -40,7 +40,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       
@@ -50,7 +50,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -59,7 +59,7 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       { title: 'Status', field: 'status' , 
@@ -68,14 +68,14 @@ export default function Accommodation() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }}
       
     ],
     data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      { gender: 'Male', area_name: 'amritapuri', loc: "entrance", token_time: '9:20 pm' },
+      { gender: 'Female', area_name: 'amritapuri', loc: "ashram", token_time: '9:20 pm' }
     ],
   });
 //   
@@ -88,9 +88,15 @@ export default function Accommodation() {
             columns={state.columns}
             data={state.data}
             options={{
-                headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+              
+              headerStyle: {
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    
+                    fontWeight: 600,
+                    
                 },
                 searchFieldStyle: {
                     background: 'inherit',

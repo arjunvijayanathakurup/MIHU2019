@@ -3,7 +3,9 @@ import {BrowserRouter,Switch, Route} from 'react-router-dom'
 
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import Notifications from './components/layout/Notifications'
 
+import AdminHome from './components/admin/AdminHome'
 
 import Home from './components/pages/Home'
 import Darshan from './components/pages/Darshan'
@@ -17,7 +19,7 @@ import Emergency from './components/pages/Emergency'
 import VCC from './components/pages/VCC'
 import Info from './components/pages/Info'
 import StaffVolunteer from './components/pages/StaffVolunteers'
-
+import Faq from './components/pages/Faq'
 
 class App extends Component{
 
@@ -26,8 +28,10 @@ class App extends Component{
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          <Notifications />
           <Switch>  
             <Route exact path="/" component={Home}/>
+            <Route exact path="/admin" component={AdminHome}/>
             <Route exact path="/darshan" component={Darshan}/>
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
@@ -38,6 +42,7 @@ class App extends Component{
             <Route exact path="/coordinator" component={Coordinator}/>
             <Route exact path="/vcc" component={VCC}/>
             <Route exact path="/info" component={Info}/>
+            <Route exact path="/faq" component={Faq}/>
             <Route exact path="/staffvolunteer" component={StaffVolunteer}/>
           </Switch>
           

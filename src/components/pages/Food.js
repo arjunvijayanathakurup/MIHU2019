@@ -9,10 +9,11 @@ export default function Food() {
       { title: 'Meal', field: 'meal', 
       cellStyle: {
         background: "inherit",
+        borderLeft: "none",
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }
     },
@@ -22,16 +23,16 @@ export default function Food() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       } },
-      { title: 'Location', field: 'Location', 
+      { title: 'Location', field: 'location', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       { title: 'Counter', field: 'counter' , 
@@ -40,15 +41,21 @@ export default function Food() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       
       
     ],
     data: [
-      { meal: 'Putte', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { meal: 'Chappathi', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' }
     ],
   });
 //   
@@ -62,8 +69,11 @@ export default function Food() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight:600
                 },
                 searchFieldStyle: {
                     background: 'inherit',

@@ -56,7 +56,7 @@ export default function Volunteer() {
   return (
       <div className="container" style={{border: "none"}}> 
         <MaterialTable
-        style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
+        style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"5px", border: "none"}}
             
             title="Coordinator"
             columns={state.columns}
