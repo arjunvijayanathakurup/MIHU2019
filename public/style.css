@@ -111,6 +111,9 @@ background: linear-gradient(to bottom, #dc2430, #7b4397);
   
 */
 }
+.MuiSvgIcon-root.MuiSelect-icon.MuiTablePagination-selectIcon{
+  color: white !important;
+}
 .MuiTableCell-root.MTableHeader-header-145.MuiTableCell-paddingCheckbox.MuiTableCell-head{
   color: white !important;
 }
