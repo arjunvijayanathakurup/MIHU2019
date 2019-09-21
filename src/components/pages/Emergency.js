@@ -12,7 +12,7 @@ export default function Emergency() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+           
         color: 'white'
       }
     },
@@ -22,7 +22,7 @@ export default function Emergency() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+           
         color: 'white'
       } },
       
@@ -33,14 +33,13 @@ export default function Emergency() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+           
         color: 'white'
       }}
       
     ],
     data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      
     ],
   });
 //   
@@ -54,8 +53,12 @@ export default function Emergency() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
+                    
                 },
                 searchFieldStyle: {
                     background: 'inherit',

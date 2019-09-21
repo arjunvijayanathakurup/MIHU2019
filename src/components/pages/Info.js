@@ -12,7 +12,7 @@ export default function Info() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }
     } 
@@ -33,8 +33,11 @@ export default function Info() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

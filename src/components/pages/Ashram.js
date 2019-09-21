@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
-export default function Darshan() {
+export default function Ashram() {
   const [state, setState] = React.useState({
     columns: [
       { title: 'Section', field: 'section', 
@@ -12,7 +12,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }
     },
@@ -22,7 +22,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       } },
       { title: 'Incharge', field: 'incharge', 
@@ -31,7 +31,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -40,15 +40,14 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+        
         color: 'white'
       }},
       
       
     ],
     data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      
     ],
   });
 //   
@@ -62,8 +61,11 @@ export default function Darshan() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

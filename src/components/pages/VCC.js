@@ -12,7 +12,7 @@ export default function VCC() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }
     },
@@ -22,7 +22,7 @@ export default function VCC() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       } },
       { title: 'Place', field: 'place', 
@@ -31,7 +31,7 @@ export default function VCC() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }},
       
@@ -39,8 +39,7 @@ export default function VCC() {
       
     ],
     data: [
-      { food: 'Putte', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { food: 'Chappathi', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+      
     ],
   });
 //   
@@ -54,8 +53,11 @@ export default function VCC() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

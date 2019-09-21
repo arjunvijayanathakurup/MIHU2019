@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
-export default function Food() {
+export default function ManageFood() {
   const [state, setState] = React.useState({
     columns: [
       { title: 'Meal', field: 'meal', 
@@ -55,6 +55,20 @@ export default function Food() {
       { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
       { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
       { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
+      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
+      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
       { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' }
     ],
   });
@@ -67,6 +81,35 @@ export default function Food() {
             title="Food & Drinks"
             columns={state.columns}
             data={state.data}
+            editable={{
+        onRowAdd: newData =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              resolve();
+              const data = [...state.data];
+              data.push(newData);
+              setState({ ...state, data });
+            }, 600);
+          }),
+        onRowUpdate: (newData, oldData) =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              resolve();
+              const data = [...state.data];
+              data[data.indexOf(oldData)] = newData;
+              setState({ ...state, data });
+            }, 600);
+          }),
+        onRowDelete: oldData =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              resolve();
+              const data = [...state.data];
+              data.splice(data.indexOf(oldData), 1);
+              setState({ ...state, data });
+            }, 600);
+          }),
+      }}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',
