@@ -7,6 +7,8 @@ import Notifications from './components/layout/Notifications'
 
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
+import ManageAshram from './components/admin/ManageAshram'
+import ManageCoordinator from './components/admin/ManageCoordinator'
 
 import Home from './components/pages/Home'
 import Darshan from './components/pages/Darshan'
@@ -32,8 +34,14 @@ class App extends Component{
           <Notifications />
           <Switch>  
             <Route exact path="/" component={Home}/>
+
+
             <Route exact path="/admin" component={AdminHome}/>
             <Route exact path="/admin/accommodation" component={ManageAccommodation}/>
+            <Route exact path="/admin/accommodation" component={ManageAshram}/>
+            <Route exact path="/admin/accommodation" component={ManageCoordinator}/>
+
+
             <Route exact path="/darshan" component={Darshan}/>
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
