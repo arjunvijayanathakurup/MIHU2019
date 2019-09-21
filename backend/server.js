@@ -36,21 +36,21 @@ const vccsRouter = require('./routes/vccs');
 const volunteersRouter = require('./routes/volunteers');
 
 app.use('/accomodations', accomodationsRouter);
-app.use('/ashrams', ashramsRouter);
-app.use('/coordinators', coordinatorsRouter);
-app.use('/darshans', darshansRouter);
-// app.use('/emergencies', emergenciesRouter);
-// app.use('/faqs', faqsRouter);
-// app.use('/foods', foodsRouter);
-// app.use('/informations', informationsRouter);
-// app.use('/links', linksRouter);
-// app.use('/logs', logsRouter);
-// app.use('/staffdetails', staffDetailsRouter);
-// app.use('/staffvolunteers', staddVolunteersRouter);
-// app.use('/transportation', transportationsRouter);
-app.use('/users', usersRouter);
-// app.use('/vccs', vccsRouter);
-// app.use('/volunteers', volunteersRouter);
+app.use('/ashram', ashramsRouter);
+app.use('/coordinator', coordinatorsRouter);
+app.use('/darshan', darshansRouter);
+app.use('/emergency', emergenciesRouter);
+app.use('/faq', faqsRouter);
+app.use('/food', foodsRouter);
+app.use('/information', informationsRouter);
+app.use('/live', linksRouter);
+app.use('/log', logsRouter);
+app.use('/staffdetail', staffDetailsRouter);
+app.use('/staffvolunteer', staddVolunteersRouter);
+app.use('/transportation', transportationsRouter);
+app.use('/user', usersRouter);
+app.use('/vcc', vccsRouter);
+app.use('/volunteer', volunteersRouter);
 
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
