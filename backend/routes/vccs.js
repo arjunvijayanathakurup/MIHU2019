@@ -23,4 +23,25 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    VCC.findById(req.params.id)
+        .then(users => {
+        users.name = req.body.name;
+        users.email = req.body.email;
+        users.password = req.body.password;
+        users.token = req.body.token;
+
+        users.save()
+        .then(() => res.json('VCC details updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    VCC.findByIdAndDelete(req.params.id)
+      .then(() => res.json('VCC details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;
