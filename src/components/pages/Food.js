@@ -73,7 +73,7 @@ export default function Food() {
                     background: 'inherit',
                     color: 'white',
                     fontSize: '0.9em',
-                    fontWeight:600
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

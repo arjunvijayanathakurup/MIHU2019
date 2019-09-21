@@ -117,6 +117,9 @@ background: linear-gradient(to bottom, #dc2430, #7b4397);
 .MuiTableCell-root.MuiTableCell-body{
   color: white !important;
 }
+.MuiButtonBase-root.MuiTableSortLabel-root div{
+  color: white !important;
+}
 .outer-div.outer-div {
   height: 200px;
 
