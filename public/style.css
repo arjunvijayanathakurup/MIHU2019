@@ -14,7 +14,21 @@
 .container1 {
   margin: 0 18%;
 }
+.material-icons.MuiIcon-root{
+  color: white;
+}
+input.MuiInputBase-input.MuiInput-input{
+ color: white !important;
 
+}
+
+.MuiTypography-root.MuiTypography-h6{
+  color: white !important;
+
+}
+.container2 {
+  margin: 0 25%;
+}
 .hide-notification {
   display: none;
 
@@ -97,24 +111,27 @@ background: linear-gradient(to bottom, #dc2430, #7b4397);
   
 */
 }
+.MuiTableCell-root.MTableHeader-header-145.MuiTableCell-paddingCheckbox.MuiTableCell-head{
+  color: white !important;
+}
 
 .outer-div.outer-div {
   height: 200px;
 
 }
 div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters{
-  color: white;
+  color: white !important;
   background: inherit;
 }
 div.MuiToolbar-root.MuiToolbar-regular.MTableToolbar-root-32.MuiToolbar-gutters{
   background: rgba(0, 0, 0, 0.1);
 }
 div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters button{
-  color: white;
+  color: white !important;
   background: inherit;
 }
 div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.Component-paginationToolbar-2.MuiToolbar-gutters .MuiTypography-root.MuiTypography-caption{
-  color: white;
+  color: white !important;
   text-align: center;
   background: inherit;
 }
