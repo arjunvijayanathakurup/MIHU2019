@@ -19,4 +19,22 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Information.findById(req.params.id)
+      .then(informations => {
+        informations.message = req.body.message;
+
+        informations.save()
+          .then(() => res.json('Information details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Information.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Information details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;
