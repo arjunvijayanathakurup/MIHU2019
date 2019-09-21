@@ -6,7 +6,7 @@ class Home extends Component{
 
         return (
             <div className="container" >
-                <h3 style={{marginBottom: "15px"}}>Manage modules</h3>
+                {/* <h3 style={{marginBottom: "15px"}}>Manage modules</h3> */}
                     {/* <hr style={{borderBottom: "white solid 1px",marginBottom: "10px"}}/> */}
                     <div className="row" >
                         <div className="col-xs-12 col-lg-3 col-sm-6 thumb outer-div">

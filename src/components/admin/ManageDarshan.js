@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
-export default function Darshan() {
+export default function ManageDarshan() {
   const [state, setState] = React.useState({
     columns: [
       { title: 'Date', field: 'date', 
