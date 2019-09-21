@@ -5,10 +5,10 @@ class Home extends Component{
     render(){
 
         return (
-            <div className="container1" >
-                <h3>Manage</h3>
+            <div className="container" >
+                <h3>Manage modules</h3>
                     <div className="row" >
-                        <div className="col-xs-12 col-lg-4 col-sm-6 thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6 thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/accommodation">
                                 <div className="center-vh c1" >
@@ -19,7 +19,7 @@ class Home extends Component{
                             </div> 
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             
                             
                             <div className="middle zoom">
@@ -34,7 +34,7 @@ class Home extends Component{
                             
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/food">
                                 <div className="center-vh c1" >
@@ -46,7 +46,7 @@ class Home extends Component{
                             
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/transportation">
                                 <div className="center-vh c1" >
@@ -58,7 +58,7 @@ class Home extends Component{
                             
                         </div>
 
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                                 <Link to="/emergency">
                                 <div className="center-vh c1" >
@@ -69,7 +69,7 @@ class Home extends Component{
                             </div> 
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                                 <Link to='/coordinator'>
                                     <div className="center-vh c1" >
@@ -80,7 +80,7 @@ class Home extends Component{
                             </div> 
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                                 <Link to='/volunteer'>
                                     <div className="center-vh c1" >
@@ -91,7 +91,7 @@ class Home extends Component{
                             </div> 
                         </div>
 
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-map" ></i>
@@ -100,7 +100,7 @@ class Home extends Component{
                             </div> 
                         </div>
 
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/info">
                                 <div className="center-vh c1" >
@@ -111,7 +111,7 @@ class Home extends Component{
                             </div> 
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/VCC">
                                 <div className="center-vh c1" >
@@ -122,7 +122,7 @@ class Home extends Component{
                             </div> 
                         </div>
                         
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                             <Link to="/ashram">
                                 <div className="center-vh c1" >
@@ -133,7 +133,7 @@ class Home extends Component{
                             </div> 
                         </div>
 
-                        <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-question-circle" ></i>
