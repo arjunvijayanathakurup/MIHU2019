@@ -6,6 +6,7 @@ class Home extends Component{
 
         return (
             <div className="container1" >
+                <h3>Manage</h3>
                     <div className="row" >
                         <div className="col-xs-12 col-lg-4 col-sm-6 thumb outer-div">
                             <div className="middle zoom">
