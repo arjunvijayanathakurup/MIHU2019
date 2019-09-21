@@ -13,7 +13,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }
     },
@@ -23,7 +23,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }},
       { title: 'Department', field: 'department', 
@@ -32,7 +32,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       } },
       { title: 'Contact', field: 'contact' , 
@@ -41,15 +41,15 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }},
       
     ],
     data: [
+      { name: 'Abhilash',seva: 'MIHU', department: 'MCA', contact: '9567347371' },
       { name: 'Arjun',seva: 'MIHU', department: 'MCA', contact: '9786576998' },
-      { name: 'Arjun',seva: 'MIHU', department: 'MCA', contact: '9786576998' },
-      { name: 'Arjun',seva: 'MIHU', department: 'MCA', contact: '9786576998' }
+      { name: 'Malavika',seva: 'MIHU', department: 'MCA', contact: '9786576998' }
     ],
   });
 //   
@@ -63,8 +63,11 @@ export default function Volunteer() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',
