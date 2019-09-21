@@ -33,7 +33,7 @@ export default function Info() {
             data={state.data}
             options={{
                 headerStyle: {
-                  
+                  borderTop: 'white solid 1px',
                     background: 'inherit',
                     color: 'white',
                     fontSize: '0.9em',
