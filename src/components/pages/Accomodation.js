@@ -94,9 +94,7 @@ export default function Accommodation() {
                     background: 'inherit',
                     color: 'white',
                     fontSize: '0.9em',
-                    
                     fontWeight: 600,
-                    
                 },
                 searchFieldStyle: {
                     background: 'inherit',
