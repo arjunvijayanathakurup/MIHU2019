@@ -5,13 +5,13 @@ user{
 	token
 }
 
-emergencies{
+~~emergencies{
 	service
 	name
 	contact
-}
+}~~
 
-accomodations{
+~~accomodations{
 	gender
 	areaname
 	locationofacc
@@ -19,9 +19,9 @@ accomodations{
 	coord
 	contact
 	isfull
-}
+}~~
 
-volunteers{
+~~volunteers{
 	name
 	batch
 	campus
@@ -29,35 +29,33 @@ volunteers{
 	SEVA
 	CORDNAME
 	CORDCONTACT
-	
-}
+}~~
 
-coordinators{
+~~coordinators{
 	NAME
 	SEVA
 	DEPARTMENT
 	CONTACT
-	
-}
+}~~~
 
 faqs{
 	QUESTION
 	ANSWER
 }
 
-darshans{
+~~darshans{
 	DATE
 	DARSHAN_TIME
 	TOKEN_LOC
 	TOKEN_TIME
-}
+}~~
 
-stadd_volunteers{
+~~stadd_volunteers{
 	NAME
 	DEPARTMENT
 	SEVA
-	
-}
+	Contact
+}~~ 
 
 log_engine{
 	USER_ID
@@ -68,7 +66,7 @@ log_engine{
 	ACTIONVAL
 }
 
-transportations{
+~~transportations{
 	MODE
 	BUSNO
 	CONTACT
@@ -76,7 +74,7 @@ transportations{
 	DESTINATION
 	DEPTIME
 	PARKING
-}
+}~~
 
 staff_table{
 	NAME
@@ -85,25 +83,25 @@ staff_table{
 	CONTACT
 }
 
-ashram_volunteers{
+~~ashram_volunteers{
 	SECTION
 	SEVA_PLACE
 	INCHARGE
 	CONTACT
-}
+}~~
 
-foods{
+~~foods{
 	MEAL
 	TIME
 	PLACE
 	COUNTER
-}
+}~~
 
-volunteer_care{
+~~volunteer_care{
 	FOOD
 	TIME
 	PLACE
-}	
+}~~	
 
 information{
 	MESSAGE

@@ -1,0 +1,82 @@
+import React from 'react';
+import MaterialTable from 'material-table';
+
+// darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
+
+export default function Darshan() {
+  const [state, setState] = React.useState({
+    columns: [
+      { title: 'Date', field: 'date', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      }
+    },
+      { title: 'Darshan TIme', field: 'darshan_time', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      } },
+      { title: 'Token Location', field: 'token_loc', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      }},
+      { title: 'Token Time', field: 'token_time' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      }},
+      
+      
+    ],
+    data: [
+      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
+      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
+    ],
+  });
+//   
+  return (
+      <div className="container" style={{border: "none"}}> 
+        <MaterialTable
+        style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
+            
+            title="Darshan Timings"
+            columns={state.columns}
+            data={state.data}
+            options={{
+                headerStyle: {
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
+                },
+                searchFieldStyle: {
+                    background: 'inherit',
+                    color: 'white',
+                    padding: "5px"
+                },
+            }}
+            />
+
+      </div>
+    
+  );
+}
