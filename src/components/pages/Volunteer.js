@@ -13,7 +13,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }
     },
@@ -23,7 +23,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       } },
       { title: 'Campus', field: 'campus', 
@@ -32,7 +32,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -41,7 +41,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }},
       
@@ -51,7 +51,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }},
       { title: 'Coordinator Name', field: 'cordname' , 
@@ -60,7 +60,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }},
       { title: 'Coordinator Contact', field: 'cordcontact' , 
@@ -69,7 +69,7 @@ export default function Volunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+            
         color: 'white'
       }}
       
@@ -92,8 +92,11 @@ export default function Volunteer() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

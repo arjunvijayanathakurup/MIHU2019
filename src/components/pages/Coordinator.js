@@ -58,7 +58,7 @@ export default function Volunteer() {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"5px", border: "none"}}
             
-            title="Coordinator"
+            title="Coordinators"
             columns={state.columns}
             data={state.data}
             options={{
