@@ -3,6 +3,7 @@ import {BrowserRouter,Switch, Route} from 'react-router-dom'
 
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import Notifications from './components/layout/Notifications'
 
 
 import Home from './components/pages/Home'
@@ -26,6 +27,7 @@ class App extends Component{
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          <Notifications />
           <Switch>  
             <Route exact path="/" component={Home}/>
             <Route exact path="/darshan" component={Darshan}/>

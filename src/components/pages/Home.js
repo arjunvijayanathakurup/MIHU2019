@@ -6,7 +6,7 @@ class Home extends Component{
 
         return (
             <div className="container1" >
-                    <div className="notification hide-notification" >
+                    {/* <div className="notification hide-notification" >
                         <div className="notification-main">
                         <h5 style={{fontStyle:"normal"}}>Notifications</h5>
                             <div className="row">
@@ -54,7 +54,7 @@ class Home extends Component{
                             
                             
                         </div>
-                    </div>	
+                    </div>	 */}
                     <div className="row" >
                         <div className="col-xs-12 col-lg-4 col-sm-6 thumb outer-div">
                             <div className="middle zoom">
