@@ -25,4 +25,25 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Coordinator.findById(req.params.id)
+      .then(coordinators => {
+        coordinators.name = req.body.name;
+        coordinators.seva = req.body.seva;
+        coordinators.department = req.body.department;
+        coordinators.contact = req.body.contact;
+
+        coordinators.save()
+          .then(() => res.json('Coordinator details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Coordinator.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Coordinator details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;
