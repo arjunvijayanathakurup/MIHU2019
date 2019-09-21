@@ -12,7 +12,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+         
         color: 'white'
       }
     },
@@ -22,7 +22,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+         
         color: 'white'
       } },
       { title: 'Token Location', field: 'token_loc', 
@@ -31,7 +31,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+         
         color: 'white'
       }},
       { title: 'Token Time', field: 'token_time' , 
@@ -40,7 +40,7 @@ export default function Darshan() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+         
         color: 'white'
       }},
       
@@ -62,8 +62,11 @@ export default function Darshan() {
             data={state.data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',
