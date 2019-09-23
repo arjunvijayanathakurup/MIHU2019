@@ -1,9 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // coordinators{ NAME SEVA DEPARTMENT CONTACT}
 
 export default function ManageCoordinator() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/coordinator')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
+  }, [])
+
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -46,11 +58,7 @@ export default function ManageCoordinator() {
       }},
       
     ],
-    data: [
-      { name: 'Abhilash',seva: 'MIHU', department: 'MCA', contact: '9567347371' },
-      { name: 'Arjun',seva: 'MIHU', department: 'MCA', contact: '9786576998' },
-      { name: 'Malavika',seva: 'MIHU', department: 'MCA', contact: '9786576998' }
-    ],
+    data
   });
 //   
   return (
@@ -60,7 +68,7 @@ export default function ManageCoordinator() {
             
             title="Coordinators"
             columns={state.columns}
-            data={state.data}
+            data={data}
             editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -68,6 +76,8 @@ export default function ManageCoordinator() {
               resolve();
               const data = [...state.data];
               data.push(newData);
+              axios.post('http://localhost:5000/coordinator/add', newData)
+              .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),
