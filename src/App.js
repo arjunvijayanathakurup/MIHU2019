@@ -4,6 +4,10 @@ import {BrowserRouter,Switch, Route} from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Notifications from './components/layout/Notifications'
+import Updates from './components/layout/Updates'
+
+import SimpleMap from './components/Maps/Maps'
+
 
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
@@ -41,6 +45,7 @@ class App extends Component{
         <div className="App">
           <Navbar />
           <Notifications />
+          {/* <Updates /> */}
           <Switch>  
             <Route exact path="/" component={Home}/>
 
@@ -70,6 +75,7 @@ class App extends Component{
             <Route exact path="/coordinator" component={Coordinator}/>
             <Route exact path="/vcc" component={VCC}/>
             <Route exact path="/info" component={Info}/>
+            <Route exact path="/maps" component={SimpleMap}/>
             <Route exact path="/faq" component={Faq}/>
             <Route exact path="/staffvolunteer" component={StaffVolunteer}/>
           </Switch>

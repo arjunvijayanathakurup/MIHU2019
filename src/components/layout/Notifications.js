@@ -6,7 +6,7 @@ import React from 'react';
 export default function Notifications() {
      
   return (
-      <div className="notification hide-notification container2" >
+      <div className="notification hide-notification container1" >
             <div className="notification-main">
                 <h5 style={{fontStyle:"normal"}}>Notifications</h5>
                     <div className="row">
