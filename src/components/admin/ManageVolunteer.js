@@ -1,9 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // volunteers{ name batch campus CONTACT SEVA CORDNAME CORDCONTACT
 
 export default function ManageVolunteer() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/volunteer')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -54,7 +65,7 @@ export default function ManageVolunteer() {
             
         color: 'white'
       }},
-      { title: 'Coordinator Name', field: 'cordname' , 
+      { title: 'Coordinator Name', field: 'cordName' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -63,7 +74,7 @@ export default function ManageVolunteer() {
             
         color: 'white'
       }},
-      { title: 'Coordinator Contact', field: 'cordcontact' , 
+      { title: 'Coordinator Contact', field: 'cordContact' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -74,12 +85,7 @@ export default function ManageVolunteer() {
       }}
       
     ],
-    data: [
-      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
-      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
-      { name: 'sdf', batch: 'dfd', campus: 'sdfsfd', contact: '233', seva: 'sdfsdf', cordname: 'dff', cordcontact: 'ewq' },
-
-    ],
+    data
   });
 //   
   return (
@@ -89,7 +95,7 @@ export default function ManageVolunteer() {
             
             title="Volunteers"
             columns={state.columns}
-            data={state.data}
+            data={data}
             editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -97,6 +103,8 @@ export default function ManageVolunteer() {
               resolve();
               const data = [...state.data];
               data.push(newData);
+              axios.post('http://localhost:5000/volunteer/add', newData)
+              .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),
