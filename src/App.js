@@ -5,6 +5,9 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Notifications from './components/layout/Notifications'
 
+import SimpleMap from './components/Maps/Maps'
+
+
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
 import ManageAshram from './components/admin/ManageAshram'
@@ -68,6 +71,7 @@ class App extends Component{
             <Route exact path="/coordinator" component={Coordinator}/>
             <Route exact path="/vcc" component={VCC}/>
             <Route exact path="/info" component={Info}/>
+            <Route exact path="/maps" component={SimpleMap}/>
             <Route exact path="/faq" component={Faq}/>
             <Route exact path="/staffvolunteer" component={StaffVolunteer}/>
           </Switch>

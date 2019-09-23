@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import MaterialTable from 'material-table';
 
-// stadd_volunteers{NAME DEPARTMENT SEVA contact}
+// volunteers{ name batch campus CONTACT SEVA CORDNAME CORDCONTACT
 
-export default function StaffVolunteer() {
+export default function StudentVolunteer() {
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -13,26 +13,26 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-             
+            
         color: 'white'
       }
     },
-    { title: 'Department', field: 'department', 
+      { title: 'Batch', field: 'batch', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
       },
       headerStyle: {
-             
+            
         color: 'white'
       } },
-    { title: 'Seva', field: 'seva' , 
+      { title: 'Campus', field: 'campus', 
       cellStyle: {
-        background: 'inherit',
+        background: "inherit",
         color: '#FFF'
       },
       headerStyle: {
-             
+            
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -41,16 +41,44 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-             
+            
         color: 'white'
       }},
       
-     
+      { title: 'Seva', field: 'seva' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+            
+        color: 'white'
+      }},
+      { title: 'Coordinator Name', field: 'cordname' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+            
+        color: 'white'
+      }},
+      { title: 'Coordinator Contact', field: 'cordcontact' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+            
+        color: 'white'
+      }}
+      
     ],
     data: [
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' }
+      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
+      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
+      { name: 'sdf', batch: 'dfd', campus: 'sdfsfd', contact: '233', seva: 'sdfsdf', cordname: 'dff', cordcontact: 'ewq' },
+
     ],
   });
 //   
@@ -59,7 +87,7 @@ export default function StaffVolunteer() {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Staff Volunteers"
+            title="Student Volunteers"
             columns={state.columns}
             data={state.data}
             options={{
