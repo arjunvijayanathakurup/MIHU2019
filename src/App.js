@@ -4,6 +4,7 @@ import {BrowserRouter,Switch, Route} from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Notifications from './components/layout/Notifications'
+import Updates from './components/layout/Updates'
 
 import SimpleMap from './components/Maps/Maps'
 
@@ -43,6 +44,7 @@ class App extends Component{
         <div className="App">
           <Navbar />
           <Notifications />
+          {/* <Updates /> */}
           <Switch>  
             <Route exact path="/" component={Home}/>
 

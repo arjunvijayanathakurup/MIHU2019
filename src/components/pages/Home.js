@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 // import Carousel from 'react-bootstrap/Carousel'
+import Updates from '../layout/Updates'
 class Home extends Component{
     render(){
 
         return (
             <div className="container1" >
+                <Updates/>
                     <div className="row" >
                         <div className="col-xs-12 col-lg-4 col-sm-6 thumb outer-div">
                             <div className="middle zoom">
@@ -137,10 +139,12 @@ class Home extends Component{
 
                         <div className="col-xs-12 col-lg-4 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                                <Link to="/faq">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-question-circle" ></i>
                                     <h5>FAQ</h5>
                                 </div>     
+                                </Link>
                             </div> 
                         </div>
                         

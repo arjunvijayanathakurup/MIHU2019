@@ -5,7 +5,26 @@
   color: rgba(255, 255, 255, .5);
   font-size: 0.9em;
 }
+#slideshow { 
+  margin-bottom: 3%;
+  position: relative; 
+  
+  width: auto ;
+  height: 10vh; 
+  padding: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
 
+#slideshow > div { 
+  position: absolute; 
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+}
 .nav1 {
   margin-bottom: 10px;
   margin-top: 5px;
