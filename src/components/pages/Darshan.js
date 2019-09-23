@@ -1,12 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function Darshan() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/darshan')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
+
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Date', field: 'date', 
+      { title: 'Token Number', field: 'token', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -16,7 +28,7 @@ export default function Darshan() {
         color: 'white'
       }
     },
-      { title: 'Darshan TIme', field: 'darshan_time', 
+      { title: 'Date', field: 'date', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -25,7 +37,7 @@ export default function Darshan() {
          
         color: 'white'
       } },
-      { title: 'Token Location', field: 'token_loc', 
+      { title: 'Darshan Time', field: 'darshanTime', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +46,16 @@ export default function Darshan() {
          
         color: 'white'
       }},
-      { title: 'Token Time', field: 'token_time' , 
+      { title: 'Token Location', field: 'tokenLocation' , 
+      cellStyle: {
+        background: 'inherit',
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      }},
+      { title: 'Token Time', field: 'tokenTime' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -47,9 +68,8 @@ export default function Darshan() {
       
     ],
     data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
-    ],
+      {token: data.token, date: data.date, darshanTime: data.darshanTime, tokenLocation: data.tokenLocation, tokenTime: data.tokenTime }
+    ]
   });
 //   
   return (
@@ -59,7 +79,7 @@ export default function Darshan() {
             
             title="Darshan Timings"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',
