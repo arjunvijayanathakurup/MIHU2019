@@ -144,7 +144,16 @@ class Home extends Component{
                                 </div>     
                             </div> 
                         </div>
-                        
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                            <Link to="/admin/staffvolunteer">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-male" ></i>
+                                    <h5>Staff Volunteer</h5>
+                                </div>     
+                                </Link>
+                            </div> 
+                        </div>
                         
                         
                         
