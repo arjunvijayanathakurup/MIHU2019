@@ -11,6 +11,7 @@ router.route('/add').post((req, res) => {
     const gender = req.body.gender;
     const areaname = req.body.areaname;
     const locationOfAcc = req.body.locationOfAcc;
+    const coord = req.body.coord;
     const category = req.body.category;
     const contact = req.body.contact;
     const isFull = Boolean(req.body.isFull);
@@ -19,6 +20,7 @@ router.route('/add').post((req, res) => {
         gender,
         areaname,
         locationOfAcc,
+        coord,
         category,
         contact,
         isFull
@@ -35,6 +37,7 @@ router.route('/update/:id').post((req, res) => {
         accomodations.gender = req.body.gender;
         accomodations.areaname = req.body.areaname;
         accomodations.locationOfAcc = req.body.locationOfAcc;
+        accomodations.coord = req.body.coord;
         accomodations.category = req.body.category;
         accomodations.contact = req.body.contact;
         accomodations.isFull = Boolean(req.body.isFull);
