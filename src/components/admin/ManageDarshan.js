@@ -1,11 +1,34 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function ManageDarshan() {
+
+const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/darshan')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
+
+  
   const [state, setState] = React.useState({
     columns: [
+      { title: 'Token Number', field: 'token', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+         
+        color: 'white'
+      }
+    },
       { title: 'Date', field: 'date', 
       cellStyle: {
         background: "inherit",
@@ -16,7 +39,7 @@ export default function ManageDarshan() {
         color: 'white'
       }
     },
-      { title: 'Darshan TIme', field: 'darshan_time', 
+      { title: 'Darshan Time', field: 'darshanTime', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -25,7 +48,7 @@ export default function ManageDarshan() {
          
         color: 'white'
       } },
-      { title: 'Token Location', field: 'token_loc', 
+      { title: 'Token Location', field: 'tokenLocation', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +57,7 @@ export default function ManageDarshan() {
          
         color: 'white'
       }},
-      { title: 'Token Time', field: 'token_time' , 
+      { title: 'Token Time', field: 'tokenTime' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -46,10 +69,7 @@ export default function ManageDarshan() {
       
       
     ],
-    data: [
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "entrance", token_time: '9:20 pm' },
-      { date: '22/05/2019', darshan_time: '9:20 pm', token_loc: "ashram", token_time: '9:20 pm' }
-    ],
+    data,
   });
 //   
   return (
@@ -59,7 +79,7 @@ export default function ManageDarshan() {
             
             title="Darshan Timings"
             columns={state.columns}
-            data={state.data}
+            data={data}
             editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -67,6 +87,8 @@ export default function ManageDarshan() {
               resolve();
               const data = [...state.data];
               data.push(newData);
+              axios.post('http://localhost:5000/darshan/add', newData)
+              .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),
