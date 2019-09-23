@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => {
     const place = req.body.place;
     const counter = req.body.counter;
 
-    const newFood = new Food({
+    const newFood = new Foods({
         meal,
         time,
         place,
@@ -24,5 +24,27 @@ router.route('/add').post((req, res) => {
     .then(() => res.json('New Food details added!'))
     .catch(err => res.status(400).json('Error ' + err));
 });
+
+router.route('/update/:id').post((req, res) => {
+    Food.findById(req.params.id)
+      .then(foods => {
+        foods.meal = req.body.meal;
+        foods.time = req.body.time;
+        foods.place = req.body.place;
+        foods.counter = req.body.counter;
+
+
+        foods.save()
+          .then(() => res.json('Food details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Food.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Food details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
 
 module.exports = router;

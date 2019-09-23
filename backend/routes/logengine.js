@@ -29,4 +29,27 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    LogEngine.findById(req.params.id)
+      .then(logengines => {
+        logengines.userId = req.body.userId;
+        logengines.username= req.body.username;
+        logengines.name = req.body.name;
+        logengines.action = req.body.action;
+        logengines.detailedData = req.body.detailedData;
+        logengines.actionVal = req.body.actionVal;
+
+        logengines.save()
+          .then(() => res.json('LogEngine details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    LogEngine.findByIdAndDelete(req.params.id)
+      .then(() => res.json('LogEngine details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;

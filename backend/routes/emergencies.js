@@ -23,4 +23,24 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Emergency.findById(req.params.id)
+      .then(emergencies => {
+        emergencies.service = req.body.service;
+        emergencies.name = req.body.name;
+        emergencies.contact = req.body.contact;
+
+        emergencies.save()
+          .then(() => res.json('Emergency details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Emergency.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Emergency details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;

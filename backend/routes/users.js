@@ -25,4 +25,25 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    User.findById(req.params.id)
+        .then(users => {
+        users.name = req.body.name;
+        users.email = req.body.email;
+        users.password = req.body.password;
+        users.token = req.body.token;
+
+        users.save()
+        .then(() => res.json('User details updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    User.findByIdAndDelete(req.params.id)
+      .then(() => res.json('User details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;

@@ -27,4 +27,26 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Darshan.findById(req.params.id)
+      .then(darshans => {
+        darshans.token = req.body.token;
+        darshans.date = req.body.date;
+        darshans.darshanTime = req.body.darshanTime;
+        darshans.tokenLocation = req.body.tokenLocation;
+        darshans.tokenTime = req.body.tokenTime;
+
+        darshans.save()
+          .then(() => res.json('Darshan details updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Darshan.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Darshan details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;

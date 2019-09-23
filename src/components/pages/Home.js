@@ -75,6 +75,7 @@ class Home extends Component{
                                         <i className="fa fa-street-view" ></i>
                                         <h5>Coordinators</h5>
                                     </div>
+                                        
                                 </Link>     
                             </div> 
                         </div>

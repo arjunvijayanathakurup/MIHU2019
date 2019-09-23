@@ -31,4 +31,27 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Transportation.findById(req.params.id)
+        .then(transportationDetails => {
+        transportationDetails.mode = req.body.mode;
+        transportationDetails.busno = req.body.busno;
+        transportationDetails.contact = req.body.contact;
+        transportationDetails.froms = req.body.froms;
+        transportationDetails.destination = req.body.destination;
+        transportationDetails.deptime = req.body.deptime;
+        transportationDetails.parking = req.body.parking;
+
+        transportationDetails.save()
+        .then(() => res.json('Transportation details updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Transportation.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Transportation details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
 module.exports = router;

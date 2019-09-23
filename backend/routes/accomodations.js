@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => {
     const locationOfAcc = req.body.locationOfAcc;
     const category = req.body.category;
     const contact = req.body.contact;
-    const isFull = req.body.isFull;
+    const isFull = Boolean(req.body.isFull);
 
     const newAccomodation = new Accomodation({
         gender,
@@ -29,4 +29,28 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error ' + err));
 });
 
+router.route('/update/:id').post((req, res) => {
+    Accomodation.findById(req.params.id)
+      .then(accomodations => {
+        accomodations.gender = req.body.gender;
+        accomodations.areaname = req.body.areaname;
+        accomodations.locationOfAcc = req.body.locationOfAcc;
+        accomodations.category = req.body.category;
+        accomodations.contact = req.body.contact;
+        accomodations.isFull = Boolean(req.body.isFull);
+
+        accomodations.save()
+          .then(() => res.json('Accomodation updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').delete((req, res) => {
+    Accomodation.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Accomodation details deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = router;
+
