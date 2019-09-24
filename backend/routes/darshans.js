@@ -49,4 +49,42 @@ router.route('/update/:id').post((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
+  // router.route('/importcsv').post((req, res) => {
+  //   const  products  = []
+  //   const csvStream = csv()
+  //       .on("darshan", function(darshan){
+         
+  //        const newDarshan = new Darshan({
+  //             token: data[0] ,
+  //             date: data[1]   ,
+  //             darshanTime: data[2],
+  //             tokenLocation: data[3],
+  //             tokenTime:data[4] 
+  //        });
+         
+  //        newDarshan.save(function(error){
+  //           console.log(item);
+  //             if(error){
+  //                  throw error;
+  //             }
+  //         }); 
+
+  //   }).on("end", function(){
+
+  //   });
+  
+  //   stream.pipe(csvStream);
+  //   res.json({success : "Data imported successfully.", status : 200});
+     
+  // }).get('/fetchdata', function(req, res, next) {
+    
+  //   Product.find({}, function(err, docs) {
+  //       if (!err){ 
+  //           res.json({success : "Updated Successfully", status : 200, data: docs});
+  //       } else { 
+  //           throw err;
+  //       }
+  //   });
+  // })
+
 module.exports = router;
