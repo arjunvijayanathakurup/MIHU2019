@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';  
-
+import './style2.css';
 export default function ManageAccomodation() {
 
   const [data, setData] = useState([]);

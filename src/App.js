@@ -53,20 +53,20 @@ class App extends Component{
 
 
             <Route exact path="/admin" component={AdminHome}/>
-            <Route exact path="/admin/accommodation" component={ManageAccommodation}/>
-            <Route exact path="/admin/ashram" component={ManageAshram}/>
-            <Route exact path="/admin/coordinator" component={ManageCoordinator}/>
-            <Route exact path="/admin/darshan" component={ManageDarshan}/>
-            <Route exact path="/admin/emergency" component={ManageEmergency}/>
-            <Route exact path="/admin/notifications" component={ManageNotifications}/>
-            <Route exact path="/admin/updates" component={ManageUpdates}/>
-            <Route exact path="/admin/faq" component={ManageFaq}/>
-            <Route exact path="/admin/food" component={ManageFood}/>
-            <Route exact path="/admin/info" component={ManageInfo}/>
-            <Route exact path="/admin/transportation" component={ManageTransportation}/>
-            <Route exact path="/admin/vcc" component={ManageVCC}/>
-            <Route exact path="/admin/volunteer" component={ManageVolunteer}/>
-            <Route exact path="/admin/staffvolunteer" component={ManageStaffVolunteer}/>
+            <Route path="/admin/accommodation" component={ManageAccommodation}/>
+            <Route path="/admin/ashram" component={ManageAshram}/>
+            <Route path="/admin/coordinator" component={ManageCoordinator}/>
+            <Route path="/admin/darshan" component={ManageDarshan}/>
+            <Route path="/admin/emergency" component={ManageEmergency}/>
+            <Route path="/admin/notifications" component={ManageNotifications}/>
+            <Route path="/admin/updates" component={ManageUpdates}/>
+            <Route path="/admin/faq" component={ManageFaq}/>
+            <Route path="/admin/food" component={ManageFood}/>
+            <Route path="/admin/info" component={ManageInfo}/>
+            <Route path="/admin/transportation" component={ManageTransportation}/>
+            <Route path="/admin/vcc" component={ManageVCC}/>
+            <Route path="/admin/volunteer" component={ManageVolunteer}/>
+            <Route path="/admin/staffvolunteer" component={ManageStaffVolunteer}/>
 
 
             <Route exact path="/darshan" component={Darshan}/>
