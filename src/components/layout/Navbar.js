@@ -16,7 +16,7 @@ const Navbar = (props) => {
                 <button className="navbar-toggler" type="button"  style={{border: "none"}}>
                     {/* <span className="navbar-toggler-icon" ></span> */}
                     
-                    <a style={{padding: "8px", color: "rgba(255,255,255,0.5)"}} href="#"><i className="fa fa-home nav4" ></i></a>
+                    <a style={{padding: "8px", color: "rgba(255,255,255,0.5)"}} href="/"><i className="fa fa-home nav4" ></i></a>
                     <a style={{padding: "8px", color: "rgba(255,255,255,0.5)"}} href="#"><i className="fa fa-bell nav5" ></i></a>
                 </button>
                 
