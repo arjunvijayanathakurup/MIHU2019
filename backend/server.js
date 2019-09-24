@@ -1,10 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const csv = require("fast-csv");
+mongoose.Promise = global.Promise;
 require('dotenv').config();
 
 const app = express();
+
+
+
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -17,6 +21,11 @@ const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('MongoDB database connection established successfully!');
 })
+
+// app.use(session({ cookie: { maxAge: 60000 }, 
+//     secret: 'secret',
+//     resave: false, 
+//     saveUninitialized: false}));
 
 const accomodationsRouter = require('./routes/accomodations');
 const ashramsRouter = require('./routes/ashramvolunteers');

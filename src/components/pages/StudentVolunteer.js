@@ -1,9 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // volunteers{ name batch campus CONTACT SEVA CORDNAME CORDCONTACT
 
 export default function StudentVolunteer() {
+
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/staffvolunteer')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -74,12 +86,7 @@ export default function StudentVolunteer() {
       }}
       
     ],
-    data: [
-      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
-      { name: 'Arjun', batch: 'MCA', campus: 'Amritapuri', contact: '9786576998', seva: 'MIHU', cordname: 'sdfasd', cordcontact: 'ssdfsdf' },
-      { name: 'sdf', batch: 'dfd', campus: 'sdfsfd', contact: '233', seva: 'sdfsdf', cordname: 'dff', cordcontact: 'ewq' },
-
-    ],
+    data 
   });
 //   
   return (
@@ -89,7 +96,7 @@ export default function StudentVolunteer() {
             
             title="Student Volunteers"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

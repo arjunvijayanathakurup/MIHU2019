@@ -12,7 +12,7 @@ const Navbar = (props) => {
                 </ul>
             </div>
             <div className="mx-auto order-0">
-                <a className="navbar-brand mx-auto h-style nav2" href="#" >May I help you?</a>
+                <a className="navbar-brand mx-auto h-style nav2" href="/" >May I help you?</a>
                 <button className="navbar-toggler" type="button"  style={{border: "none"}}>
                     {/* <span className="navbar-toggler-icon" ></span> */}
                     

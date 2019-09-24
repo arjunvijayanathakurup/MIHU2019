@@ -73,6 +73,7 @@ useEffect(() => {
   });
 //   
   return (
+    <>
       <div className="container" style={{border: "none"}}> 
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
@@ -126,8 +127,9 @@ useEffect(() => {
                 },
             }}
             />
-
       </div>
-    
+      <button type="button" className="btn btn-primary" >Primary</button>
+     
+    </>
   );
 }
