@@ -6,8 +6,22 @@
   font-size: 0.9em;
 }
 .MuiButtonBase-root.MuiExpansionPanelSummary-root{
- background: rgba(0, 0, 0, 0.8);
+ background:  rgba(0, 0, 0, .7) !important;
  color: white !important;
+}
+.MuiExpansionPanelDetails-root{
+  color: white !important;
+}
+.MuiSvgIcon-root{
+  color: white !important;
+}
+.MuiCollapse-container.MuiCollapse-entered{
+  background:  rgba(0, 0, 0, .5) !important;
+  background: inherit !important;
+
+}
+.MuiPaper-root.MuiPaper-elevation1.MuiExpansionPanel-root.MuiExpansionPanel-rounded.MuiPaper-rounded{
+  background: inherit !important;
 }
 @media screen and (max-width: 880px) {
   #slideshow {
