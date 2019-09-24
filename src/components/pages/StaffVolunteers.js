@@ -1,9 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // stadd_volunteers{NAME DEPARTMENT SEVA contact}
 
 export default function StaffVolunteer() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/staffvolunteer')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -13,7 +24,7 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }
     },
@@ -23,7 +34,7 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       } },
     { title: 'Seva', field: 'seva' , 
@@ -32,7 +43,7 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -41,31 +52,30 @@ export default function StaffVolunteer() {
         color: '#FFF'
       },
       headerStyle: {
-        background: 'rgba(0, 0, 0, 0.6)',
+             
         color: 'white'
       }},
       
      
     ],
-    data: [
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' }
-    ],
+    data
   });
 //   
   return (
-      <div className="container" style={{border: "none"}}> 
+      <div className="" style={{border: "none"}}> 
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Staff Coordinator"
+            title="Staff Volunteers"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    color: 'white'
+                  borderTop: 'white solid 1px',
+                    background: 'inherit',
+                    color: 'white',
+                    fontSize: '0.9em',
+                    fontWeight: 600,
                 },
                 searchFieldStyle: {
                     background: 'inherit',

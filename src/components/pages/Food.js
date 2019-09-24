@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function Food() {
+
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/food')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
+  }, [])
+
   const [state, setState] = React.useState({
     columns: [
       { title: 'Meal', field: 'meal', 
@@ -26,7 +39,7 @@ export default function Food() {
         
         color: 'white'
       } },
-      { title: 'Location', field: 'location', 
+      { title: 'Location', field: 'place', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -47,16 +60,7 @@ export default function Food() {
       
       
     ],
-    data: [
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' }
-    ],
+    data
   });
 //   
   return (
@@ -66,7 +70,7 @@ export default function Food() {
             
             title="Food & Drinks"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

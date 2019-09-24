@@ -1,9 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // coordinators{ NAME SEVA DEPARTMENT CONTACT}
 
 export default function Coordinator() {
+
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/coordinator')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -46,11 +58,7 @@ export default function Coordinator() {
       }},
       
     ],
-    data: [
-      { name: 'Abhilash',seva: 'MIHU', department: 'MCA', contact: '9567347371' },
-      { name: 'Arjun',seva: 'MIHU', department: 'MCA', contact: '9786576998' },
-      { name: 'Malavika',seva: 'MIHU', department: 'MCA', contact: '9786576998' }
-    ],
+    data
   });
 //   
   return (
@@ -60,7 +68,7 @@ export default function Coordinator() {
             
             title="Coordinators"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function ManageAshram() {
+
+const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/ashram')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
+
   const [state, setState] = React.useState({
     columns: [
       { title: 'Section', field: 'section', 
@@ -16,7 +28,7 @@ export default function ManageAshram() {
         color: 'white'
       }
     },
-      { title: 'Seva Location', field: 'seva_location', 
+      { title: 'Seva Location', field: 'sevaPlace', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -46,9 +58,7 @@ export default function ManageAshram() {
       
       
     ],
-    data: [
-      
-    ],
+    data
   });
 //   
   return (
@@ -58,7 +68,7 @@ export default function ManageAshram() {
             
             title="Ashram Volunteers"
             columns={state.columns}
-            data={state.data}
+            data={data}
             editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -66,6 +76,8 @@ export default function ManageAshram() {
               resolve();
               const data = [...state.data];
               data.push(newData);
+              axios.post('http://localhost:5000/ashram/add', newData)
+              .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),

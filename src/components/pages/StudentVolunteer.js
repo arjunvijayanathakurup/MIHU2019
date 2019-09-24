@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
 
 // volunteers{ name batch campus CONTACT SEVA CORDNAME CORDCONTACT
 
-export default function ManageVolunteer() {
+export default function StudentVolunteer() {
+
 
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/volunteer')
+  axios.get('http://localhost:5000/staffvolunteer')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);
@@ -65,7 +66,7 @@ useEffect(() => {
             
         color: 'white'
       }},
-      { title: 'Coordinator Name', field: 'cordName' , 
+      { title: 'Coordinator Name', field: 'cordname' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -74,7 +75,7 @@ useEffect(() => {
             
         color: 'white'
       }},
-      { title: 'Coordinator Contact', field: 'cordContact' , 
+      { title: 'Coordinator Contact', field: 'cordcontact' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -85,48 +86,17 @@ useEffect(() => {
       }}
       
     ],
-    data
+    data 
   });
 //   
   return (
-      <div className="container" style={{border: "none"}}> 
+      <div className="" style={{border: "none"}}> 
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Volunteers"
+            title="Student Volunteers"
             columns={state.columns}
             data={data}
-            editable={{
-        onRowAdd: newData =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              const data = [...state.data];
-              data.push(newData);
-              axios.post('http://localhost:5000/volunteer/add', newData)
-              .then(res => console.log(res.data));
-              setState({ ...state, data });
-            }, 600);
-          }),
-        onRowUpdate: (newData, oldData) =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              const data = [...state.data];
-              data[data.indexOf(oldData)] = newData;
-              setState({ ...state, data });
-            }, 600);
-          }),
-        onRowDelete: oldData =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              const data = [...state.data];
-              data.splice(data.indexOf(oldData), 1);
-              setState({ ...state, data });
-            }, 600);
-          }),
-      }}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

@@ -37,6 +37,39 @@ class Home extends Component{
                         
                         <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
                             <div className="middle zoom">
+                            <Link to="/admin/notifications">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-bullhorn " ></i>
+                                    <h5>Notifications</h5>
+                                </div>  
+                                </Link>   
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                            <Link to="/admin/upload">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-file-zip-o " ></i>
+                                    <h5>Upload CSV</h5>
+                                </div>  
+                                </Link>   
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                            <Link to="/admin/updates">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-plus-square " ></i>
+                                    <h5>Updates</h5>
+                                </div>  
+                                </Link>   
+                            </div> 
+                        </div>
+
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
                             <Link to="/admin/food">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-cutlery " ></i>
@@ -144,7 +177,16 @@ class Home extends Component{
                                 </div>     
                             </div> 
                         </div>
-                        
+                        <div className="col-xs-12 col-lg-3 col-sm-6  thumb outer-div">
+                            <div className="middle zoom">
+                            <Link to="/admin/staffvolunteer">
+                                <div className="center-vh c1" >
+                                    <i className="fa fa-male" ></i>
+                                    <h5>Staff Volunteer</h5>
+                                </div>     
+                                </Link>
+                            </div> 
+                        </div>
                         
                         
                         
