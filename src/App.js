@@ -78,6 +78,8 @@ class App extends Component{
             <Route exact path="/maps" component={SimpleMap}/>
             <Route exact path="/faq" component={Faq}/>
             <Route exact path="/staffvolunteer" component={StaffVolunteer}/>
+
+            <Route render={() => <h1 className="font-weight-bold text-center pagenotfound">404 Page Not Found!</h1>}/>
           </Switch>
           
           <Footer />
