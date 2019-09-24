@@ -2,19 +2,20 @@ import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
 
-// volunteers{ name batch campus CONTACT SEVA CORDNAME CORDCONTACT
 
-export default function ManageVolunteer() {
+// stadd_volunteers{NAME DEPARTMENT SEVA contact}
+
+export default function ManageStaffVolunteer() {
 
   const [data, setData] = useState([]);
 
-useEffect(() => {
-  axios.get('http://localhost:5000/volunteer')
-  .then(json => setData(json.data))
-  .catch((error) => {
-    console.log(error);
-  })
-}, [])
+  useEffect(() => {
+    axios.get('http://localhost:5000/staffvolunteer')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
+  }, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -24,26 +25,26 @@ useEffect(() => {
         color: '#FFF'
       },
       headerStyle: {
-            
+        background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }
     },
-      { title: 'Batch', field: 'batch', 
+    { title: 'Department', field: 'department', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
       },
       headerStyle: {
-            
+        background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       } },
-      { title: 'Campus', field: 'campus', 
+    { title: 'Seva', field: 'seva' , 
       cellStyle: {
-        background: "inherit",
+        background: 'inherit',
         color: '#FFF'
       },
       headerStyle: {
-            
+        background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }},
       { title: 'Contact', field: 'contact' , 
@@ -52,38 +53,11 @@ useEffect(() => {
         color: '#FFF'
       },
       headerStyle: {
-            
+        background: 'rgba(0, 0, 0, 0.6)',
         color: 'white'
       }},
       
-      { title: 'Seva', field: 'seva' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }},
-      { title: 'Coordinator Name', field: 'cordName' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }},
-      { title: 'Coordinator Contact', field: 'cordContact' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }}
-      
+     
     ],
     data
   });
@@ -93,7 +67,7 @@ useEffect(() => {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Volunteers"
+            title="Staff Coordinator"
             columns={state.columns}
             data={data}
             editable={{
@@ -103,7 +77,7 @@ useEffect(() => {
               resolve();
               const data = [...state.data];
               data.push(newData);
-              axios.post('http://localhost:5000/volunteer/add', newData)
+              axios.post('http://localhost:5000/staffvolunteer/add', newData)
               .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
@@ -129,11 +103,8 @@ useEffect(() => {
       }}
             options={{
                 headerStyle: {
-                  borderTop: 'white solid 1px',
-                    background: 'inherit',
-                    color: 'white',
-                    fontSize: '0.9em',
-                    fontWeight: 600,
+                    background: 'rgba(0, 0, 0, 0.6)',
+                    color: 'white'
                 },
                 searchFieldStyle: {
                     background: 'inherit',

@@ -1,9 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 // transportations{ MODE BUSNO CONTACT FROM DESTINATION DEPTIME PARKING }
 export default function Transportation() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:5000/transportation')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
+  }, [])
+
   const [state, setState] = useState({
     columns: [
       { title: 'Mode', field: 'mode', 
@@ -16,7 +26,7 @@ export default function Transportation() {
         color: 'white'
       }
     },
-      { title: 'Bus No', field: 'bus', 
+      { title: 'Bus No', field: 'busno', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +44,7 @@ export default function Transportation() {
           
         color: 'white'
       }},
-      { title: 'Departure', field: 'depart' , 
+      { title: 'Departure', field: 'froms' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -44,7 +54,7 @@ export default function Transportation() {
         color: 'white'
       }},
       
-      { title: 'Destination', field: 'destin' , 
+      { title: 'Destination', field: 'destination' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -53,7 +63,7 @@ export default function Transportation() {
           
         color: 'white'
       }},
-      { title: 'Departure Time', field: 'dtime' , 
+      { title: 'Departure Time', field: 'deptime' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -73,9 +83,7 @@ export default function Transportation() {
       }}
       
     ],
-    data: [
-      
-    ],
+    data
   });
 //   
   return (
@@ -85,7 +93,7 @@ export default function Transportation() {
             
             title="Transportation"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

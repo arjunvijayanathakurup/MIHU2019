@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function Info() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/information')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = React.useState({
     columns: [
       { title: 'Information', field: 'info', 
@@ -18,9 +29,7 @@ export default function Info() {
     } 
       
     ],
-    data: [
-      { info: 'Hey man' }
-    ],
+    data
   });
    
   return (
@@ -30,7 +39,7 @@ export default function Info() {
             
             title="Information"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

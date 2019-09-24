@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function VCC() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/vcc')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = React.useState({
     columns: [
       { title: 'Food', field: 'food', 
@@ -34,13 +45,8 @@ export default function VCC() {
             
         color: 'white'
       }},
-      
-      
-      
     ],
-    data: [
-      
-    ],
+    data
   });
 //   
   return (
@@ -50,7 +56,7 @@ export default function VCC() {
             
             title="Food & Drinks"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

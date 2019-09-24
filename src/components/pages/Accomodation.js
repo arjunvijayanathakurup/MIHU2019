@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
-
+import axios from 'axios';
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function Accommodation() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/accomodations')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
+  }, [])
+  
   const [state, setState] = React.useState({
     columns: [
       { title: 'Gender', field: 'gender', 
@@ -16,7 +27,7 @@ export default function Accommodation() {
         color: 'white'
       }
     },
-      { title: 'Area Name', field: 'area_name', 
+      { title: 'Area Name', field: 'areaname', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -25,7 +36,7 @@ export default function Accommodation() {
         
         color: 'white'
       } },
-      { title: 'Location', field: 'loc', 
+      { title: 'Location', field: 'locationOfAcc', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -34,7 +45,7 @@ export default function Accommodation() {
         
         color: 'white'
       }},
-      { title: 'Category', field: 'categ' , 
+      { title: 'Category', field: 'category' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -62,7 +73,7 @@ export default function Accommodation() {
         
         color: 'white'
       }},
-      { title: 'Status', field: 'status' , 
+      { title: 'Status', field: 'isFull' , 
       cellStyle: {
         background: 'inherit',
         color: '#FFF'
@@ -73,10 +84,7 @@ export default function Accommodation() {
       }}
       
     ],
-    data: [
-      { gender: 'Male', area_name: 'amritapuri', loc: "entrance", token_time: '9:20 pm' },
-      { gender: 'Female', area_name: 'amritapuri', loc: "ashram", token_time: '9:20 pm' }
-    ],
+
   });
 //   
   return (
@@ -86,7 +94,7 @@ export default function Accommodation() {
             
             title="Accommodation"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
               
               headerStyle: {

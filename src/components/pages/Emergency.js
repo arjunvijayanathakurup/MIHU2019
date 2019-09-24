@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function Emergency() {
+
+const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/emergency')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = React.useState({
     columns: [
       { title: 'Service', field: 'service', 
@@ -38,9 +49,7 @@ export default function Emergency() {
       }}
       
     ],
-    data: [
-      
-    ],
+    data
   });
 //   
   return (
@@ -50,7 +59,7 @@ export default function Emergency() {
             
             title="Emergency"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
 export default function ManageFood() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/food')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
+
   const [state, setState] = React.useState({
     columns: [
       { title: 'Meal', field: 'meal', 
@@ -26,7 +38,7 @@ export default function ManageFood() {
         
         color: 'white'
       } },
-      { title: 'Location', field: 'location', 
+      { title: 'Location', field: 'place', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -47,30 +59,7 @@ export default function ManageFood() {
       
       
     ],
-    data: [
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' },
-      { meal: 'Putte', time: '9:20 pm', counter: "entrance", location: 'Canteen' },
-      { meal: 'Chappathi', time: '9:20 pm', counter: "ashram", location: 'Canteen' }
-    ],
+    data
   });
 //   
   return (
@@ -80,7 +69,7 @@ export default function ManageFood() {
             
             title="Food & Drinks"
             columns={state.columns}
-            data={state.data}
+            data={data}
             editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -88,6 +77,8 @@ export default function ManageFood() {
               resolve();
               const data = [...state.data];
               data.push(newData);
+              axios.post('http://localhost:5000/food/add', newData)
+              .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),

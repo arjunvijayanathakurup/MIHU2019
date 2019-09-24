@@ -1,9 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
+import axios from 'axios';
 
 // stadd_volunteers{NAME DEPARTMENT SEVA contact}
 
 export default function StaffVolunteer() {
+
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/staffvolunteer')
+  .then(json => setData(json.data))
+  .catch((error) => {
+    console.log(error);
+  })
+}, [])
   const [state, setState] = useState({
     columns: [
       { title: 'Name', 
@@ -47,11 +58,7 @@ export default function StaffVolunteer() {
       
      
     ],
-    data: [
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' },
-      { name: 'Arjun',department: 'MCA',seva: 'MIHU',  contact: '9786576998' }
-    ],
+    data
   });
 //   
   return (
@@ -61,7 +68,7 @@ export default function StaffVolunteer() {
             
             title="Staff Volunteers"
             columns={state.columns}
-            data={state.data}
+            data={data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',
