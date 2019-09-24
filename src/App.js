@@ -12,6 +12,8 @@ import SimpleMap from './components/Maps/Maps'
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
 import ManageAshram from './components/admin/ManageAshram'
+import ManageNotifications from './components/admin/ManageNotifications'
+import ManageUpdates from './components/admin/ManageUpdates'
 import ManageCoordinator from './components/admin/ManageCoordinator'
 import ManageDarshan from './components/admin/ManageDarshan'
 import ManageEmergency from './components/admin/ManageEmergency'
@@ -55,6 +57,8 @@ class App extends Component{
             <Route exact path="/admin/coordinator" component={ManageCoordinator}/>
             <Route exact path="/admin/darshan" component={ManageDarshan}/>
             <Route exact path="/admin/emergency" component={ManageEmergency}/>
+            <Route exact path="/admin/notifications" component={ManageNotifications}/>
+            <Route exact path="/admin/updates" component={ManageUpdates}/>
             <Route exact path="/admin/faq" component={ManageFaq}/>
             <Route exact path="/admin/food" component={ManageFood}/>
             <Route exact path="/admin/info" component={ManageInfo}/>
