@@ -4,13 +4,14 @@ import {HashRouter,Switch, Route} from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Notifications from './components/layout/Notifications'
-import Updates from './components/layout/Updates'
+// import Updates from './components/layout/Updates'
 
 import SimpleMap from './components/Maps/Maps'
 
 
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
+import UploadCSV from './components/admin/UploadCSV'
 import ManageAshram from './components/admin/ManageAshram'
 import ManageNotifications from './components/admin/ManageNotifications'
 import ManageUpdates from './components/admin/ManageUpdates'
@@ -66,7 +67,7 @@ class App extends Component{
             <Route path="/admin/vcc" component={ManageVCC}/>
             <Route path="/admin/volunteer" component={ManageVolunteer}/>
             <Route path="/admin/staffvolunteer" component={ManageStaffVolunteer}/>
-
+            <Route path="/admin/uploadcsv" component={UploadCSV}/>
 
             <Route exact path="/darshan" component={Darshan}/>
             <Route exact path="/accommodation" component={Accomodation}/>

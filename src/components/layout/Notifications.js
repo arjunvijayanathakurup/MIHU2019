@@ -13,7 +13,7 @@ export default function Notifications() {
                         <div className="col-xs-12 col-sm-6">
                             <div className="notification-section">  
                                 <h6>
-                                    <i class="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
+                                    <i className="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
                                     Hello!
                                 </h6> 
                             </div>
@@ -21,7 +21,7 @@ export default function Notifications() {
                         <div className="col-xs-12 col-sm-6">
                             <div className="notification-section">  
                                 <h6>
-                                    <i class="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
+                                    <i className="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
                                     Welcome to MIHU!!
                                 </h6> 
                             </div>
@@ -29,7 +29,7 @@ export default function Notifications() {
                         <div className="col-xs-12 col-sm-6">
                             <div className="notification-section">  
                                 <h6>
-                                    <i class="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
+                                    <i className="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
                                     Made by CSA dept!
                                 </h6> 
                             </div>
@@ -37,7 +37,7 @@ export default function Notifications() {
                         <div className="col-xs-12 col-sm-6">
                             <div className="notification-section">  
                                 <h6>
-                                    <i class="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
+                                    <i className="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
                                     Lorem ipsum !
                                 </h6> 
                             </div>
@@ -45,7 +45,7 @@ export default function Notifications() {
                         <div className="col-xs-12 col-sm-6">
                             <div className="notification-section">  
                                 <h6>
-                                    <i class="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
+                                    <i className="fa fa-star" aria-hidden="true" style={{fontSize:"1em", marginRight: "8px"}}></i>
                                     Food available at Amriteshwari hall!
                                 </h6> 
                             </div>

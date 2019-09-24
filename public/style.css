@@ -11,13 +11,15 @@
 }
 .MuiExpansionPanelDetails-root{
   color: white !important;
+  border: none !important;
 }
 .MuiSvgIcon-root{
   color: white !important;
 }
-.MuiCollapse-container.MuiCollapse-entered{
+.MuiCollapse-container.MuiCollapse-entered .MuiCollapse-container.MuiCollapse-entered{
   background:  rgba(0, 0, 0, .5) !important;
   background: inherit !important;
+  border: none !important;
 
 }
 .MuiPaper-root.MuiPaper-elevation1.MuiExpansionPanel-root.MuiExpansionPanel-rounded.MuiPaper-rounded{
@@ -37,6 +39,7 @@
   padding: 10px; 
   box-shadow: 0 0 20px rgba(0,0,0,0.4); 
   background: rgba(0, 0, 0, 0.6);
+  font-family: 'Cabin', sans-serif;
   color: #f8f8ff !important;
   font-style: normal !important;
 }
@@ -83,7 +86,7 @@ input.MuiInputBase-input.MuiInput-input{
 .notification {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 5px;
-
+  
   margin-bottom: 30px;
   border-radius: 12px;
 }
@@ -141,7 +144,7 @@ body {
   /*background-color:#1d1d1d !important;*/
   font-family: "Asap", sans-serif;
   color: #f8f8ff !important;
-  background-color:purple;
+  background-color:#001B3A;
   background-position: center;
   background-size: cover;
   /* background: #7b4397;  
@@ -274,7 +277,7 @@ i.fa{
 
 h5 {
   margin-top: 5px;
-  color: #f8f8ff;
+  color: #f8f8ff ;
   text-decoration: none;
 }
 
@@ -308,7 +311,7 @@ img.zoom {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  color: white;
+  color: white !important;
   text-align: center;
 }
 
