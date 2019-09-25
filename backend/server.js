@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 const path = require("path");
+
 app.use(express.static(path.join(__dirname, "../build")));
 // const uri = process.env.ATLAS_URI;
 const uri = "mongodb://127.0.0.1:27017/mihudb";
