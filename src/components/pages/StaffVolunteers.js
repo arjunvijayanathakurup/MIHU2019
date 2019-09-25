@@ -9,7 +9,7 @@ export default function StaffVolunteer() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/staffvolunteer')
+  axios.get('https://localhost:5000/staffvolunteer')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

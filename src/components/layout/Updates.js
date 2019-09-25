@@ -1,25 +1,31 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 
-export default class Updates extends React.Component {
-
-  createUpdates = () => {
+export default function Updates() {
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    axios.get('http://localhost:5000/live')
+    .then(json => setData(json.data))
+    .catch((error) => {
+      console.log(error);
+    })
     
-      let updates = []
-      //Inner loop to create children
-      for (let j = 0; j < 5; j++) {
-        updates.push(<div >{`Token No: ${j + 1}`}</div>)
-      }
-     
-    return updates
-  }
+  }, [])
 
 
-  render() {
     return(
-        <div id="slideshow">
-            {this.createUpdates()}
-        </div>
+      <>
+        <marquee behavior="scroll" direction="left">
+        {data.map((data) =><> 
+                {data.live}
+                <>&nbsp;</>
+                <>&nbsp;</>
+                <>&nbsp;</>
+                <>&nbsp;</>
+                </>
+                )}
+          </marquee> 
+      </>
     )
   }
-
-}

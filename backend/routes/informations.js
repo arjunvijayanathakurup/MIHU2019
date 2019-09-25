@@ -9,9 +9,13 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const message = req.body.message;
+    const date =  req.body.date;
+    const time = req.body.time;
 
     const newInformation = new Information({
-       message
+       message,
+       date,
+       time
     });
 
     newInformation.save()
@@ -23,6 +27,8 @@ router.route('/update/:id').post((req, res) => {
     Information.findById(req.params.id)
       .then(informations => {
         informations.message = req.body.message;
+        informations.date = req.body.date;
+        informations.time = req.body.time;
 
         informations.save()
           .then(() => res.json('Information details updated!'))

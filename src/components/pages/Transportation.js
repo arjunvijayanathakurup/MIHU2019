@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function Transportation() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:5000/transportation')
+    axios.get('https://localhost:5000/transportation')
     .then(json => setData(json.data))
     .catch((error) => {
       console.log(error);

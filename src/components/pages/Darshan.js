@@ -9,7 +9,7 @@ export default function Darshan() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/darshan')
+  axios.get('https://localhost:5000/darshan')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

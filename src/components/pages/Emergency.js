@@ -9,7 +9,7 @@ export default function Emergency() {
 const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/emergency')
+  axios.get('https://localhost:5000/emergency')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

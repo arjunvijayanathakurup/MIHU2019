@@ -50,24 +50,6 @@ class App extends Component{
           {/* <Updates /> */}
           <Switch>  
             <Route exact path="/" component={Home}/>
-
-            <Route exact path="/admin" component={AdminHome}/>
-            <Route path="/admin/accommodation" component={ManageAccommodation}/>
-            <Route path="/admin/ashram" component={ManageAshram}/>
-            <Route path="/admin/coordinator" component={ManageCoordinator}/>
-            <Route path="/admin/darshan" component={ManageDarshan}/>
-            <Route path="/admin/emergency" component={ManageEmergency}/>
-            <Route path="/admin/notifications" component={ManageNotifications}/>
-            <Route path="/admin/updates" component={ManageUpdates}/>
-            <Route path="/admin/faq" component={ManageFaq}/>
-            <Route path="/admin/food" component={ManageFood}/>
-            <Route path="/admin/info" component={ManageInfo}/>
-            <Route path="/admin/transportation" component={ManageTransportation}/>
-            <Route path="/admin/vcc" component={ManageVCC}/>
-            <Route path="/admin/volunteer" component={ManageVolunteer}/>
-            <Route path="/admin/staffvolunteer" component={ManageStaffVolunteer}/>
-
-
             <Route exact path="/darshan" component={Darshan}/>
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
