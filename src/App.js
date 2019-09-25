@@ -8,24 +8,6 @@ import Notifications from './components/layout/Notifications'
 
 import SimpleMap from './components/Maps/Maps'
 
-
-import AdminHome from './components/admin/AdminHome'
-import ManageAccommodation from './components/admin/ManageAccommodation'
-import UploadCSV from './components/admin/UploadCSV'
-import ManageAshram from './components/admin/ManageAshram'
-import ManageNotifications from './components/admin/ManageNotifications'
-import ManageUpdates from './components/admin/ManageUpdates'
-import ManageCoordinator from './components/admin/ManageCoordinator'
-import ManageDarshan from './components/admin/ManageDarshan'
-import ManageEmergency from './components/admin/ManageEmergency'
-import ManageFaq from './components/admin/ManageFaq'
-import ManageFood from './components/admin/ManageFood'
-import ManageInfo from './components/admin/ManageInfo'
-import ManageTransportation from './components/admin/ManageTransportation'
-import ManageVCC from './components/admin/ManageVCC'
-import ManageVolunteer from './components/admin/ManageVolunteer'
-import ManageStaffVolunteer from './components/admin/ManageStaffVolunteer';
-
 import Home from './components/pages/Home'
 import Darshan from './components/pages/Darshan'
 import Accomodation from './components/pages/Accomodation'
