@@ -7,9 +7,7 @@ class Maps extends React.Component {
   render() {
     return (
         <div className="container">
-            <img src={map1} />
-            <img src={map2} />
-
+            
 
             <LeafletMap
             center={[9.093971, 76.492608]}
@@ -33,6 +31,9 @@ class Maps extends React.Component {
             </Popup>
             </Marker>
             </LeafletMap>
+            <img src={map1} style={{width: "100%", marginBottom: "10px", marginTop: "10px"}}/>
+            <img src={map2} style={{width: "100%" , marginBottom: "10px"}} />
+
         </div>
       
     );
