@@ -9,7 +9,7 @@ export default function Info() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/information')
+  axios.get('https://localhost:5000/information')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);
@@ -17,7 +17,27 @@ useEffect(() => {
 }, [])
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Information', field: 'info', 
+      { title: 'Schedule', field: 'message', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+            
+        color: 'white'
+      }
+    } ,
+    { title: 'Date', field: 'date', 
+      cellStyle: {
+        background: "inherit",
+        color: '#FFF'
+      },
+      headerStyle: {
+            
+        color: 'white'
+      }
+    } ,
+    { title: 'Time', field: 'time', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -37,7 +57,7 @@ useEffect(() => {
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Information"
+            title="Information & Schedule"
             columns={state.columns}
             data={data}
             options={{

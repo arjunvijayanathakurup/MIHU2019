@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
-import {BrowserRouter,Switch, Route} from 'react-router-dom'
+import {HashRouter,Switch, Route} from 'react-router-dom'
 
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Notifications from './components/layout/Notifications'
-import Updates from './components/layout/Updates'
+// import Updates from './components/layout/Updates'
 
 import SimpleMap from './components/Maps/Maps'
 
 
 import AdminHome from './components/admin/AdminHome'
 import ManageAccommodation from './components/admin/ManageAccommodation'
+import UploadCSV from './components/admin/UploadCSV'
 import ManageAshram from './components/admin/ManageAshram'
 import ManageNotifications from './components/admin/ManageNotifications'
 import ManageUpdates from './components/admin/ManageUpdates'
@@ -43,32 +44,13 @@ class App extends Component{
 
   render (){
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Navbar />
           <Notifications />
           {/* <Updates /> */}
           <Switch>  
             <Route exact path="/" component={Home}/>
-
-
-            <Route exact path="/admin" component={AdminHome}/>
-            <Route path="/admin/accommodation" component={ManageAccommodation}/>
-            <Route path="/admin/ashram" component={ManageAshram}/>
-            <Route path="/admin/coordinator" component={ManageCoordinator}/>
-            <Route path="/admin/darshan" component={ManageDarshan}/>
-            <Route path="/admin/emergency" component={ManageEmergency}/>
-            <Route path="/admin/notifications" component={ManageNotifications}/>
-            <Route path="/admin/updates" component={ManageUpdates}/>
-            <Route path="/admin/faq" component={ManageFaq}/>
-            <Route path="/admin/food" component={ManageFood}/>
-            <Route path="/admin/info" component={ManageInfo}/>
-            <Route path="/admin/transportation" component={ManageTransportation}/>
-            <Route path="/admin/vcc" component={ManageVCC}/>
-            <Route path="/admin/volunteer" component={ManageVolunteer}/>
-            <Route path="/admin/staffvolunteer" component={ManageStaffVolunteer}/>
-
-
             <Route exact path="/darshan" component={Darshan}/>
             <Route exact path="/accommodation" component={Accomodation}/>
             <Route exact path="/food" component={Food}/>
@@ -88,7 +70,7 @@ class App extends Component{
           
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';  
-import './style2.css';
+// import './style2.css';
 export default function ManageAccomodation() {
 
   const [data, setData] = useState([]);
@@ -12,9 +12,11 @@ export default function ManageAccomodation() {
     .catch((error) => {
       console.log(error);
     })
+    
   }, [])
+
   
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         columns: [
           { title: 'Gender', field: 'gender', 
           cellStyle: {
@@ -80,10 +82,19 @@ export default function ManageAccomodation() {
           headerStyle: {
             
             color: 'white'
+          }},
+          { title: 'ID', field: '_id' , 
+          cellStyle: {
+            background: 'inherit',
+            color: '#FFF'
+          },
+          headerStyle: {
+            
+            color: 'white'
           }}
           
         ],
-        data,
+        data: data,
       });
     //   
       return (
@@ -99,10 +110,11 @@ export default function ManageAccomodation() {
           new Promise(resolve => {
             setTimeout(() => {
               resolve();
-              const data = [...state.data];
-              data.push(newData);
+              const datav = [...state.data];
+              datav.push(newData);
               axios.post('http://localhost:5000/accomodations/add', newData)
               .then(res => console.log(res.data));
+              {/* window.location('/#/accomodation'); */}
               setState({ ...state, data });
             }, 600);
           }),
@@ -110,8 +122,10 @@ export default function ManageAccomodation() {
           new Promise(resolve => {
             setTimeout(() => {
               resolve();
-              const data = [...state.data];
-              data[data.indexOf(oldData)] = newData;
+              const datav = data;
+              const id = datav._id;
+              datav[datav.indexOf(oldData)] = newData;
+              
               setState({ ...state, data });
             }, 600);
           }),
@@ -119,8 +133,12 @@ export default function ManageAccomodation() {
           new Promise(resolve => {
             setTimeout(() => {
               resolve();
-              const data = [...state.data];
-              data.splice(data.indexOf(oldData), 1);
+              const datav = [data];
+              const id = datav._id;
+              console.log(id);
+              {/* data.splice(data.indexOf(oldData), 1); */}
+              axios.delete('localhost:5000/accomodations/'+id)
+                .then(res => console.log(res.data));
               setState({ ...state, data });
             }, 600);
           }),

@@ -7,8 +7,6 @@ require('dotenv').config();
 
 const app = express();
 
-
-
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -16,8 +14,9 @@ app.use(express.json());
 
 const path = require("path");
 app.use(express.static(path.join(__dirname, "../build")));
+// const uri = process.env.ATLAS_URI;
+const uri = "mongodb://127.0.0.1:27017/mihudb";
 
-const uri = "mongodb://locahost:";
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 const connection = mongoose.connection;
 
@@ -25,10 +24,6 @@ connection.once('open', () => {
     console.log('MongoDB database connection established successfully!');
 })
 
-// app.use(session({ cookie: { maxAge: 60000 }, 
-//     secret: 'secret',
-//     resave: false, 
-//     saveUninitialized: false}));
 
 const accomodationsRouter = require('./routes/accomodations');
 const ashramsRouter = require('./routes/ashramvolunteers');
@@ -47,6 +42,8 @@ const usersRouter = require('./routes/users');
 const vccsRouter = require('./routes/vccs');
 const volunteersRouter = require('./routes/volunteers');
 
+
+
 app.use('/accomodations', accomodationsRouter);
 app.use('/ashram', ashramsRouter);
 app.use('/coordinator', coordinatorsRouter);
@@ -63,6 +60,10 @@ app.use('/transportation', transportationsRouter);
 app.use('/user', usersRouter);
 app.use('/vcc', vccsRouter);
 app.use('/volunteer', volunteersRouter);
+
+app.get('*', function(req, res){
+    res.render("<h1>404-Page Not Found</h1>");
+});
 
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
