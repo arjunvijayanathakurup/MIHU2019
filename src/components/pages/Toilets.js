@@ -1,25 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import Toilets from './Toilets'
+
 
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
 
-export default function Info() {
+export default function Toilets() {
 
-  const [data, setData] = useState([]);
-
-useEffect(() => {
-  axios.get('https://mihu.amrita.ac.in/information')
-  .then(json => setData(json.data))
-  .catch((error) => {
-    console.log(error);
-  })
-}, [])
+  
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Schedule', field: 'message', 
+      { title: 'Area', field: 'area', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -29,17 +21,7 @@ useEffect(() => {
         color: 'white'
       }
     } ,
-    { title: 'Date', field: 'date', 
-      cellStyle: {
-        background: "inherit",
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }
-    } ,
-    { title: 'Time', field: 'time', 
+    { title: 'Location', field: 'location', 
       cellStyle: {
         background: "inherit",
         color: '#FFF'
@@ -49,19 +31,29 @@ useEffect(() => {
         color: 'white'
       }
     } 
+    
       
     ],
-    data
+    data: [
+        {area: "Ashram", location: "Alagapuri"},
+        {area: "Ashram", location: "Backside of E block (Amrita Darshanam) "},
+        {area: "Ashram", location: "Backside of AmritaKripa hospital "},
+        {area: "Birthday Venue", location: "Near prabhakaranji store/carpool "},
+        {area: "Birthday Venue", location: "West of Pandhal"},
+        {area: "Birthday Venue", location: "East of Pandhal"},
+        {area: "Girls Hostel", location: "Opp. to girl’s mess hall "},
+        {area: "Girls Hostel", location: "Near biotech rainwater harvest "}
+    ],
   });
    
   return (
-      <div className="container" style={{border: "none"}}> 
+      <div> 
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
-            title="Schedule"
+            title="Toilets"
             columns={state.columns}
-            data={data}
+            data={state.data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',
@@ -78,8 +70,8 @@ useEffect(() => {
             }}
             />
             {/* <h3 style={{ marginBottom: "10px", marginTop: "30px", textDecoration: "underline"}}></h3> */}
-            <br/><br/>
-            <Toilets/>
+            
+            
             
 
       </div>
