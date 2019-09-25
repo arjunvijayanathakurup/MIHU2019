@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 
 const staffDetailSchema = new Schema({
     name: {type: String, required: true},
-    seva: {type: String},
     department: {type: String, required: true},
     contact: {type: String, required: true},
 },{

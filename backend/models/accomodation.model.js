@@ -6,6 +6,7 @@ const accomodationsSchema = new Schema({
     gender: {type: String, required: true},
     areaname: {type: String, required: true},
     locationOfAcc: {type: String, required: true},
+    coord: {type: String, required: true},
     category: {type: String, required: true},
     contact: {type: String, required: true},
     isFull: {type: Boolean, required: true},
