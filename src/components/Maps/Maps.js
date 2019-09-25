@@ -31,6 +31,8 @@ class Maps extends React.Component {
             </Popup>
             </Marker>
             </LeafletMap>
+            <hr/>
+            <h3 style={{ marginBottom: "10px", marginTop: "30px", textDecoration: "underline"}}>More</h3>
             <img src={map1} style={{width: "100%", marginBottom: "10px", marginTop: "10px"}}/>
             <img src={map2} style={{width: "100%" , marginBottom: "10px"}} />
 

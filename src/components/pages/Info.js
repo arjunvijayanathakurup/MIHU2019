@@ -79,10 +79,12 @@ useEffect(() => {
                 },
             }}
             />
-
-            <img src={malayalam} alt="Malayalam"/>
-            <img src={tamil} alt="Tamil"/>
-            <img src={english} alt="English"/>
+            {/* <h3 style={{ marginBottom: "10px", marginTop: "30px", textDecoration: "underline"}}></h3> */}
+            <img src={english} alt="English" style={{width: "100%" , marginBottom: "10px",  marginTop: "10px"}}/>
+            <img src={malayalam} alt="Malayalam" style={{width: "100%", marginBottom: "10px"}}/>
+            <img src={tamil} alt="Tamil" style={{width: "100%" , marginBottom: "10px"}} />
+            
+            
 
       </div>
     
