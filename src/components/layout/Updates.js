@@ -16,7 +16,7 @@ export default function Updates() {
 
     return(
       <>
-        <marquee behavior="scroll" direction="left">
+        <marquee behavior="scroll" direction="left" style={{marginBottom: "30px"}}>
         {data.map((data) =><> 
                 {data.live}
                 <>&nbsp;</>
