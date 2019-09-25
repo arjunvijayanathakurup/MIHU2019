@@ -109,7 +109,7 @@ class Home extends Component{
                             <Link to="/info">
                                 <div className="center-vh c1" >
                                     <i className="fa fa-info-circle" ></i>
-                                    <h5>Schedule</h5>
+                                    <h5>Info/Schedule</h5>
                                 </div>     
                                 </Link>
                             </div> 
