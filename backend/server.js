@@ -12,10 +12,11 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// const path = require("path");
-// app.use(express.static(path.join(__dirname, "../build")));
-const uri = process.env.ATLAS_URI;
-// const uri = "mongodb://127.0.0.1:";
+const path = require("path");
+app.use(express.static(path.join(__dirname, "../build")));
+// const uri = process.env.ATLAS_URI;
+const uri = "mongodb://127.0.0.1:27017/mihudb";
+
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 const connection = mongoose.connection;
 
