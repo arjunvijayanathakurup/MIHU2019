@@ -9,7 +9,7 @@ export default function Ashram() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://localhost:5000/ashram')
+    axios.get('https://mihu.amrita.ac.in/ashram')
     .then(json => setData(json.data))
     .catch((error) => {
       console.log(error);

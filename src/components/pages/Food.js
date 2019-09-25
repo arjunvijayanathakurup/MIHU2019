@@ -10,7 +10,7 @@ export default function Food() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://localhost:5000/food')
+    axios.get('https://mihu.amrita.ac.in/food')
     .then(json => setData(json.data))
     .catch((error) => {
       console.log(error);
