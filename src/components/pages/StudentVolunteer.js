@@ -10,7 +10,7 @@ export default function StudentVolunteer() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('https://mihu.amrita.ac.in/staffvolunteer')
+  axios.get('https://mihu.amrita.ac.in/volunteer')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);
@@ -18,17 +18,7 @@ useEffect(() => {
 }, [])
   const [state, setState] = useState({
     columns: [
-      { title: 'Name', 
-      field: 'name', 
-      cellStyle: {
-        background: "inherit",
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }
-    },
+      
       { title: 'Batch', field: 'batch', 
       cellStyle: {
         background: "inherit",
@@ -47,15 +37,7 @@ useEffect(() => {
             
         color: 'white'
       }},
-      { title: 'Contact', field: 'contact' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }},
+      
       
       { title: 'Seva', field: 'seva' , 
       cellStyle: {
@@ -66,24 +48,8 @@ useEffect(() => {
             
         color: 'white'
       }},
-      { title: 'Coordinator Name', field: 'cordname' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }},
-      { title: 'Coordinator Contact', field: 'cordcontact' , 
-      cellStyle: {
-        background: 'inherit',
-        color: '#FFF'
-      },
-      headerStyle: {
-            
-        color: 'white'
-      }}
+      
+      
       
     ],
     data 
@@ -91,6 +57,7 @@ useEffect(() => {
 //   
   return (
       <div className="" style={{border: "none"}}> 
+        
         <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
