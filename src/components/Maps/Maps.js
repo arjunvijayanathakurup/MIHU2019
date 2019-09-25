@@ -1,11 +1,16 @@
 import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
+import map1 from  './img/map1.png'
+import map2 from './img/map2.png';
 
 class Maps extends React.Component {
   render() {
     return (
         <div className="container">
-            
+            <img src={map1} />
+            <img src={map2} />
+
+
             <LeafletMap
             center={[9.093971, 76.492608]}
             zoom={18}
@@ -24,7 +29,7 @@ class Maps extends React.Component {
             />
             <Marker position={[9.093971, 76.492608]}>
             <Popup>
-                MCA class room (First)
+                Amrita Vishwa Vidyapeetham
             </Popup>
             </Marker>
             </LeafletMap>
