@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import malayalam from './img/malayalam.png'
-import tamil from './img/tamil.png'
-import english from './img/english.png'
+
 
 
 // darshans{ DATE DARSHAN_TIME TOKEN_LOC TOKEN_TIME }
@@ -80,9 +78,7 @@ useEffect(() => {
             }}
             />
             {/* <h3 style={{ marginBottom: "10px", marginTop: "30px", textDecoration: "underline"}}></h3> */}
-            <img src={english} alt="English" style={{width: "100%" , marginBottom: "10px",  marginTop: "10px"}}/>
-            <img src={malayalam} alt="Malayalam" style={{width: "100%", marginBottom: "10px"}}/>
-            <img src={tamil} alt="Tamil" style={{width: "100%" , marginBottom: "10px"}} />
+            
             
             
 
