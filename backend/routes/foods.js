@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => {
     const place = req.body.place;
     const counter = req.body.counter;
 
-    const newFood = new Foods({
+    const newFood = new Food({
         meal,
         time,
         place,
