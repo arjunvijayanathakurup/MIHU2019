@@ -9,7 +9,7 @@ export default function Info() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('https://localhost:5000/information')
+  axios.get('https://mihu.amrita.ac.in/information')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

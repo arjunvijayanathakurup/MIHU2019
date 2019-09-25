@@ -10,7 +10,7 @@ export default function Coordinator() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('https://localhost:5000/coordinator')
+  axios.get('https://mihu.amrita.ac.in:/coordinator')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

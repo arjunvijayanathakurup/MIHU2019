@@ -10,7 +10,7 @@ export default function StudentVolunteer() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('https://localhost:5000/staffvolunteer')
+  axios.get('https://mihu.amrita.ac.in/staffvolunteer')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);

@@ -9,7 +9,7 @@ export default function VCC() {
   const [data, setData] = useState([]);
 
 useEffect(() => {
-  axios.get('https://localhost:5000/vcc')
+  axios.get('https://mihu.amrita.ac.in/vcc')
   .then(json => setData(json.data))
   .catch((error) => {
     console.log(error);
