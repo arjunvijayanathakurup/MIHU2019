@@ -76,8 +76,8 @@ useEffect(() => {
   });
 //   
   return (
-      <div className="container" style={{border: "none"}}> 
-        <MaterialTable
+      <div className="container1" style={{border: "none"}}> 
+        {/* <MaterialTable
         style={{backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white", borderRadius:"0px", border: "none"}}
             
             title="Darshan Timings"
@@ -97,7 +97,7 @@ useEffect(() => {
                     padding: "5px"
                 },
             }}
-            />
+            /> */}
             <img src={english} alt="English" style={{width: "100%" , marginBottom: "10px",  marginTop: "10px"}}/>
             <img src={malayalam} alt="Malayalam" style={{width: "100%", marginBottom: "10px"}}/>
             <img src={tamil} alt="Tamil" style={{width: "100%" , marginBottom: "10px"}} />
