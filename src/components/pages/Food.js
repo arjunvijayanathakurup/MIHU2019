@@ -9,13 +9,13 @@ export default function Food() {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios.get('https://mihu.amrita.ac.in/food')
-    .then(json => setData(json.data))
-    .catch((error) => {
-      console.log(error);
-    })
-  }, [])
+  // useEffect(() => {
+  //   axios.get('https://mihu.amrita.ac.in/food')
+  //   .then(json => setData(json.data))
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }, [])
 
   const [state, setState] = React.useState({
     columns: [
@@ -60,7 +60,15 @@ export default function Food() {
       
       
     ],
-    data
+    data: [
+      {meal: "Breakfast",time:"8 am - 26th, 27th September",place: "College", counter: "3", },
+      {meal: "Breakfast ",time:"8 am - 26th, 27th September",place: "Ashram", counter: "3", },
+      {meal: "Lunch ",time:"12pm - 26th, 27th September",place: "College", counter: "3", },
+      {meal: "Lunch ",time:"12pm - 26th, 27th September",place: "Ashram", counter: "3", },
+      {meal: "Dinner ",time:"7pm - 26th September",place: "Ashram", counter: "3", },
+      {meal: "Dinner ",time:"7pm - 27th September",place: "College", counter: "3", },
+      {meal: "Dinner ",time:"7pm - 27th September",place: "Ashram", counter: "3", }
+    ]
   });
 //   
   return (
@@ -70,7 +78,7 @@ export default function Food() {
             
             title="Food & Drinks"
             columns={state.columns}
-            data={data}
+            data={state.data}
             options={{
                 headerStyle: {
                   borderTop: 'white solid 1px',
